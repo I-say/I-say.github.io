@@ -96,8 +96,8 @@ const ISAY = {
       lugar:       "CUGDL",
       descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — próximamente más información sobre este taller.",
       roles:       ["Instructor"],
-      link:        "",
-      link_texto:  "",
+      link:        "taller-excel/index.html",
+      link_texto:  "Ver clases",
       stats:       []
     },
     {
@@ -180,7 +180,59 @@ const ISAY = {
   ],
 
   /* ── SKILLS ── */
-  skills: ["Python","SQL","TensorFlow","Power BI","Odoo ERP","ETL","Jupyter","Deep Learning","Pandas","Excel Avanzado","Tableau","Data Architecture"]
+  skills: ["Python","SQL","TensorFlow","Power BI","Odoo ERP","ETL","Jupyter","Deep Learning","Pandas","Excel Avanzado","Tableau","Data Architecture"],
+
+  /* ── ESTA SEMANA ──
+     ─────────────────────────────────────────────────────
+     REGLA: NUNCA borres un volumen anterior. Solo AGREGA
+     uno nuevo al INICIO del array (index 0 = más reciente).
+     La página mostrará el más reciente por defecto y las
+     flechas ◀ ▶ permiten navegar el historial completo.
+
+     Para agregar la semana nueva, COPIA este bloque y
+     pégalo ANTES del volumen anterior, separado por coma:
+     {
+       numero:   "Vol. 02",
+       fecha:    "Semana del DD de Mes de AAAA",
+       intro:    "Frase de apertura de la semana.",
+       noticias: [
+         { titulo: "...", fuente: "Fuente · Fecha", desc: "..." },
+         { titulo: "...", fuente: "Fuente · Fecha", desc: "..." },
+         { titulo: "...", fuente: "Fuente · Fecha", desc: "..." }
+       ],
+       pelicula: { titulo: "...", año: "AAAA", nota: "..." }
+     }
+     ───────────────────────────────────────────────────── */
+  semanas: [
+    /* ── VOL. 00 — Plantilla inicial (no borrar) ── */
+    {
+      numero:   "Vol. 00",
+      fecha:    "Semana de ejemplo · 2026",
+      intro:    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      noticias: [
+        {
+          titulo: "Lorem ipsum noticia uno",
+          fuente: "Fuente · Fecha",
+          desc:   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+        },
+        {
+          titulo: "Lorem ipsum noticia dos",
+          fuente: "Fuente · Fecha",
+          desc:   "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+          titulo: "Lorem ipsum noticia tres",
+          fuente: "Fuente · Fecha",
+          desc:   "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+      ],
+      pelicula: {
+        titulo: "Lorem Ipsum: La Película",
+        año:    "0000",
+        nota:   "Lorem ipsum dolor sit amet — consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      }
+    }
+  ]
 
 }; /* ← fin de la zona editable */
 
@@ -313,6 +365,47 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="tl-org">${esc(t.org)}</div>
       </div>
     </div>`).join('');
+
+  /* ── esta semana (con navegación de volúmenes) ── */
+  if (ISAY.semanas && ISAY.semanas.length > 0) {
+    const all = ISAY.semanas;   // índice 0 = más reciente
+    let idx = 0;                // empezamos en el más reciente
+
+    function renderSemana(i) {
+      const s = all[i];
+      document.getElementById('semana-vol').textContent     = s.numero;
+      document.getElementById('semana-fecha').textContent   = s.fecha;
+      document.getElementById('semana-intro').textContent   = s.intro;
+      document.getElementById('semana-counter').textContent =
+        `${all.length - i} / ${all.length}`;
+
+      document.getElementById('semana-noticias').innerHTML = s.noticias.map(n => `
+        <div class="noticia-card">
+          <div class="noticia-titulo">${esc(n.titulo)}</div>
+          <div class="noticia-fuente">${esc(n.fuente)}</div>
+          <p class="noticia-desc">${esc(n.desc)}</p>
+        </div>`).join('');
+
+      document.getElementById('semana-peli').innerHTML = s.pelicula ? `
+        <div class="peli-eyebrow">🎬 Película de la semana</div>
+        <div class="peli-titulo">${esc(s.pelicula.titulo)}</div>
+        <div class="peli-año">${esc(s.pelicula.año)}</div>
+        <p class="peli-nota">${esc(s.pelicula.nota)}</p>` : '';
+
+      // estado de los botones
+      document.getElementById('semana-prev').disabled = (i >= all.length - 1);
+      document.getElementById('semana-next').disabled = (i <= 0);
+    }
+
+    renderSemana(0);
+
+    document.getElementById('semana-prev').addEventListener('click', () => {
+      if (idx < all.length - 1) { idx++; renderSemana(idx); }
+    });
+    document.getElementById('semana-next').addEventListener('click', () => {
+      if (idx > 0) { idx--; renderSemana(idx); }
+    });
+  }
 
   /* ── reveal on scroll ── */
   const obs = new IntersectionObserver(
@@ -708,6 +801,112 @@ body::before {
 .tl-org { font-size: .75rem; color: var(--muted); }
 
 /* ──────────────────────────────────────
+   ESTA SEMANA
+────────────────────────────────────── */
+.semana-section {
+  max-width: 1160px; margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+.semana-header {
+  display: flex; align-items: center; gap: 1rem;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding: .4rem 0;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.semana-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 800; color: var(--ink);
+}
+.semana-vol {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem; font-weight: 600; color: var(--gold);
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.semana-fecha {
+  font-size: .72rem; color: var(--muted); font-weight: 500;
+  letter-spacing: .3px;
+}
+.semana-nav {
+  margin-left: auto;
+  display: flex; align-items: center; gap: .5rem;
+}
+.semana-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem; color: var(--muted); font-weight: 600;
+  min-width: 36px; text-align: center;
+}
+.semana-btn {
+  width: 30px; height: 30px; border-radius: 4px;
+  border: 1px solid var(--border-strong); background: var(--paper2);
+  color: var(--ink); font-size: .85rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .18s;
+}
+.semana-btn:hover:not(:disabled) { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.semana-btn:disabled { opacity: .3; cursor: default; }
+.semana-intro {
+  font-size: .88rem; color: var(--muted); font-style: italic;
+  margin-bottom: 1.75rem; max-width: 680px;
+}
+.semana-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1.5rem;
+}
+.noticias-col { display: flex; flex-direction: column; gap: 1rem; }
+.noticia-card {
+  background: var(--paper2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--r);
+  padding: 1rem 1.1rem;
+  transition: transform .2s;
+}
+.noticia-card:hover { transform: translateX(3px); }
+.noticia-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; font-weight: 700; color: var(--ink);
+  margin-bottom: .25rem;
+}
+.noticia-fuente {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem; color: var(--gold); font-weight: 600;
+  letter-spacing: .5px; text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.noticia-desc { font-size: .85rem; color: var(--muted); line-height: 1.65; }
+.peli-col {}
+.peli-card {
+  background: var(--ink); color: var(--paper);
+  border-radius: var(--r);
+  padding: 1.25rem 1.1rem;
+  height: 100%;
+  display: flex; flex-direction: column; gap: .5rem;
+}
+.peli-eyebrow {
+  font-size: .65rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold-lt);
+}
+.peli-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 800; color: #fff;
+  line-height: 1.2;
+}
+.peli-año {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .78rem; color: var(--gold-lt);
+}
+.peli-nota {
+  font-size: .82rem; color: rgba(245,240,232,.7);
+  line-height: 1.6; margin-top: .25rem;
+}
+@media (max-width: 640px) {
+  .semana-grid { grid-template-columns: 1fr; }
+}
+
+/* ──────────────────────────────────────
    FOOTER
 ────────────────────────────────────── */
 footer {
@@ -770,6 +969,7 @@ footer a { color: var(--gold-lt); text-decoration: none; }
     <a href="#" class="nav-brand">Isay<span>.</span></a>
     <div class="nav-links-wrap">
       <ul id="nav-menu">
+        <li><a href="#semana">Esta Semana</a></li>
         <li><a href="#eventos">Eventos</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#trayectoria">Trayectoria</a></li>
@@ -834,6 +1034,31 @@ footer a { color: var(--gold-lt); text-decoration: none; }
   </div>
 
 </div>
+
+<hr class="full-rule"/>
+
+<!-- ESTA SEMANA -->
+<section id="semana">
+  <div class="semana-section">
+    <div class="semana-header">
+      <span class="semana-label">Esta Semana</span>
+      <span class="semana-vol"   id="semana-vol"></span>
+      <span class="semana-fecha" id="semana-fecha"></span>
+      <div class="semana-nav">
+        <button class="semana-btn" id="semana-prev" title="Semana anterior">&#8592;</button>
+        <span   class="semana-counter" id="semana-counter"></span>
+        <button class="semana-btn" id="semana-next" title="Semana siguiente">&#8594;</button>
+      </div>
+    </div>
+    <p class="semana-intro" id="semana-intro"></p>
+    <div class="semana-grid">
+      <div class="noticias-col" id="semana-noticias"></div>
+      <div class="peli-col">
+        <div class="peli-card" id="semana-peli"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <hr class="full-rule"/>
 
