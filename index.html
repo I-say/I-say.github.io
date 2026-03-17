@@ -1,194 +1,902 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infographic CV - Miguel Isay Morales Cortes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F0F2F5;
-        }
-        .palette-bg-dark { background-color: #003f5c; }
-        .palette-bg-accent { background-color: #58508d; }
-        .palette-bg-highlight { background-color: #ff6361; }
-        .palette-text-dark { color: #003f5c; }
-        .palette-text-accent { color: #58508d; }
-        .palette-text-highlight { color: #ff6361; }
-        .palette-text-gold { color: #ffa600; }
-        .flowchart-step {
-            border-left: 3px solid #bc5090;
-            position: relative;
-        }
-        .flowchart-step::before {
-            content: '';
-            position: absolute;
-            left: -11px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #bc5090;
-            border: 3px solid #ffffff;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 0;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background-color: #58508d;
-            border: 2px solid #ffffff;
-        }
-        .skill-item .icon {
-            color: #ff6361;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isay — Data Science · GDL 🇲🇽</title>
+  <meta name="description" content="I work with models — the machine learning kind. Data Science · GDL 🇲🇽"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
-<body class="text-gray-800">
+<body>
 
-    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+<script>
+/* ═══════════════════════════════════════════════════════
+   ✏️  ZONA EDITABLE — todo el contenido está aquí
+   ═══════════════════════════════════════════════════════
+   Modifica solo este bloque. El diseño se actualiza solo.
+   Para agregar un evento/proyecto: copia un bloque
+   existente, pégalo y cambia los campos.
+   ═══════════════════════════════════════════════════════ */
 
-        <header class="text-center py-12">
-            <h1 class="text-4xl md:text-6xl font-black palette-text-dark uppercase">Miguel Isay Morales Cortes</h1>
-            <p class="text-xl md:text-2xl font-semibold mt-2 palette-text-accent">Analista de Datos | Líder de Proyectos de TI | Arquitecto de Datos</p>
-        </header>
+const ISAY = {
 
-        <section id="intro" class="bg-white rounded-xl shadow-lg p-8 md:p-12 text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold palette-text-dark mb-4">Un Perfil Híbrido: Conectando la Teoría con la Ejecución</h2>
-            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                Estudiante destacado de Inteligencia Artificial y líder de proyectos de transformación digital. Mi perfil combina una profunda pasión por la teoría de datos con la aplicación estratégica para resolver complejos problemas de negocio.
-            </p>
-        </section>
+  /* ── IDENTIDAD ── */
+  nombre:    "Isay",
+  nombre_completo: "Miguel Isay Morales Cortes",
+  headline:  "I work with models — the machine learning kind.",
+  tagline:   "Data Science · GDL 🇲🇽",
+  bio: "Estudiante de IA y Ciencia de Datos en CUGDL (UdeG). Construyo sistemas reales, organizo eventos tech y enseño lo que aprendo. Siempre al día en tecnología, IA y todo lo que viene.",
 
-        <section id="core-competencies" class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8 palette-text-dark">Competencias Clave</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl">⚙️</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2 palette-text-accent">Liderazgo de Proyectos</h3>
-                    <p class="text-gray-600">Gestión integral del ciclo de vida de proyectos tecnológicos, desde la concepción hasta la implementación.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl">🔄</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2 palette-text-accent">Reingeniería de Procesos</h3>
-                    <p class="text-gray-600">Análisis y mapeo de flujos de trabajo para optimizar la operación y asegurar la adopción tecnológica.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl">🏗️</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2 palette-text-accent">Arquitectura de Datos</h3>
-                    <p class="text-gray-600">Diseño y construcción de modelos de datos y pipelines ETL para garantizar la integridad y disponibilidad de la información.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl">📊</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2 palette-text-accent">Business Intelligence</h3>
-                    <p class="text-gray-600">Desarrollo de KPIs y dashboards estratégicos para potenciar la toma de decisiones basada en datos.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="flagship-project" class="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-12">
-            <h2 class="text-3xl font-bold text-center mb-4 palette-text-dark">Proyecto Destacado: Implementación Odoo ERP en Vibamex</h2>
-            <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-10">Un proyecto integral enfocado en transformar las operaciones y la inteligencia de negocio de la compañía. Este es el flujo de valor que lidero:</p>
-            <div class="max-w-2xl mx-auto">
-                <div class="flowchart-step pl-10 pb-10">
-                    <h3 class="text-xl font-bold palette-text-accent">1. Análisis y Reingeniería de Procesos</h3>
-                    <p class="text-gray-600 mt-1">Dirijo el mapeo de los flujos de trabajo de todos los departamentos para traducir la operación al nuevo sistema, optimizando procesos para una adopción eficiente.</p>
-                </div>
-                <div class="flowchart-step pl-10 pb-10">
-                    <h3 class="text-xl font-bold palette-text-accent">2. Arquitectura de Datos y ETL</h3>
-                    <p class="text-gray-600 mt-1">Diseño y construyo desde cero la arquitectura de datos y el modelo para la extracción, transformación y carga (ETL), asegurando la integridad de la información.</p>
-                </div>
-                <div class="flowchart-step pl-10 pb-10">
-                    <h3 class="text-xl font-bold palette-text-accent">3. Business Intelligence & Reporting</h3>
-                    <p class="text-gray-600 mt-1">Desarrollo KPIs y dashboards interactivos (Power BI, Odoo) para convertir datos crudos en valor y visibilidad para la gestión diaria.</p>
-                </div>
-                <div class="flowchart-step pl-10" style="border-left: 3px solid transparent;">
-                    <h3 class="text-xl font-bold palette-text-accent">4. Toma de Decisiones Estratégicas</h3>
-                    <p class="text-gray-600 mt-1">Entrego los informes directamente a la mesa directiva, proveyendo la inteligencia de negocio necesaria para decisiones ágiles y fundamentadas.</p>
-                </div>
-            </div>
-        </section>
+  /* ── FOTO DE PERFIL ──
+     Pon tu foto como "img/profile.jpg" en tu repo de GitHub
+     y se mostrará automáticamente. */
+  foto: "img/profile.jpg",
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-            <section id="skills" class="bg-white rounded-xl shadow-lg p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 palette-text-dark">Habilidades Técnicas</h2>
-                <div class="space-y-6">
-                    <div class="skill-item">
-                        <h3 class="text-xl font-bold palette-text-accent mb-2">Business Intelligence</h3>
-                        <p class="text-gray-700">Power BI, Tableau, Looker Studio</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3 class="text-xl font-bold palette-text-accent mb-2">Análisis y Procesos</h3>
-                        <p class="text-gray-700">Reingeniería de Procesos de Negocio, Arquitectura de Datos, ETL</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3 class="text-xl font-bold palette-text-accent mb-2">Lenguajes de Programación</h3>
-                        <p class="text-gray-700">Python, SQL</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3 class="text-xl font-bold palette-text-accent mb-2">Sistemas ERP</h3>
-                        <p class="text-gray-700">Odoo Online Enterprise</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3 class="text-xl font-bold palette-text-accent mb-2">Herramientas Adicionales</h3>
-                        <p class="text-gray-700">Excel Avanzado, Jupyter Notebook, Google Colab</p>
-                    </div>
-                </div>
-            </section>
+  /* ── REDES Y CONTACTO ── */
+  instagram: "miguel_isay",
+  twitter:   "miguel_isay",
+  linkedin:  "miguel-morales7",
+  email:     "123miguelisay@gmail.com",
+  ubicacion: "Guadalajara, Jalisco · México",
 
-            <section id="impact" class="bg-white rounded-xl shadow-lg p-8 flex flex-col justify-center">
-                 <h2 class="text-3xl font-bold text-center mb-8 palette-text-dark">Impacto y Resultados</h2>
-                <div class="text-center mb-8">
-                    <p class="text-7xl font-black palette-text-highlight">60+</p>
-                    <p class="text-xl font-semibold palette-text-accent">Estudiantes Capacitados</p>
-                    <p class="text-gray-600">En Excel Avanzado y Power BI, fortaleciendo la nueva generación de talento en datos.</p>
-                </div>
-                 <div class="text-center">
-                    <span class="text-6xl palette-text-gold">★</span>
-                    <p class="text-xl font-semibold mt-2 palette-text-accent">Programa PEEES</p>
-                    <p class="text-gray-600">Miembro del selecto Programa de Estímulos a Estudiantes Sobresalientes por alto potencial de liderazgo.</p>
-                </div>
-            </section>
+  /* ── QUÉ ESTOY HACIENDO AHORA ──
+     Actualiza esto cada vez que cambies de proyecto o foco. */
+  ahora: [
+    { icono: "🎓", texto: "Organizando NVIDIA DLI para 250 alumnos en CUGDL" },
+    { icono: "⚙️", texto: "Liderando implementación Odoo ERP en Vibamex" },
+    { icono: "📚", texto: "3er semestre de IA y Ciencia de Datos · UdeG" },
+    { icono: "🌐", texto: "Repasando inglés y expandiendo redes internacionales" }
+  ],
+
+  /* ── EVENTOS Y ACTIVIDADES ──
+     ─────────────────────────────────────────────────────
+     Para agregar uno nuevo, copia este bloque:
+
+     ,{
+       tipo:        "evento",          // "evento" | "logro" | "taller"
+       destacado:   false,             // true = tarjeta grande
+       icono:       "🎯",
+       titulo:      "Nombre del evento",
+       fecha:       "2026",
+       lugar:       "Lugar",
+       descripcion: "Descripción.",
+       roles:       ["Tu rol"],
+       link:        "",                // URL o "" si no hay
+       link_texto:  "Ver más",
+       stats:       []                 // [{num:"X", label:"Y"}] o []
+     }
+     ───────────────────────────────────────────────────── */
+  eventos: [
+    {
+      tipo:        "evento",
+      destacado:   true,
+      icono:       "🤖",
+      titulo:      "Fundamentos del Deep Learning — CUGDL × NVIDIA",
+      fecha:       "2025 — 2026",
+      lugar:       "CUGDL, Universidad de Guadalajara · Puerto Vallarta",
+      descripcion: "Apoyo en la organización del curso oficial de NVIDIA DLI para 250 alumnos de 5 carreras del CUGDL. El objetivo: que cualquier estudiante, sin importar su carrera, pueda certificarse en Deep Learning.",
+      roles:       ["Organizador", "Participante", "Difusor"],
+      link:        "nvidia-dli/index.html",
+      link_texto:  "Ver portal del curso",
+      stats:       [
+        { num: "250",  label: "Lugares" },
+        { num: "5",    label: "Carreras" },
+        { num: "8h",   label: "Duración" },
+        { num: "1",    label: "Certificación" }
+      ]
+    },
+    {
+      tipo:        "taller",
+      destacado:   false,
+      icono:       "📗",
+      titulo:      "Taller de Excel · Edición 2026",
+      fecha:       "2026",
+      lugar:       "CUGDL",
+      descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — próximamente más información sobre este taller.",
+      roles:       ["Instructor"],
+      link:        "",
+      link_texto:  "",
+      stats:       []
+    },
+    {
+      tipo:        "taller",
+      destacado:   false,
+      icono:       "📊",
+      titulo:      "Taller Excel Avanzado & Power BI",
+      fecha:       "2023 — 2024",
+      lugar:       "CUGDL",
+      descripcion: "Capacité a más de 60 estudiantes en herramientas de análisis de datos y visualización profesional.",
+      roles:       ["Instructor"],
+      link:        "",
+      link_texto:  "",
+      stats:       []
+    },
+    {
+      tipo:        "logro",
+      destacado:   false,
+      icono:       "🏆",
+      titulo:      "Programa PEEES — UdeG",
+      fecha:       "2024",
+      lugar:       "Universidad de Guadalajara",
+      descripcion: "Seleccionado por alto potencial de liderazgo y desempeño académico sobresaliente.",
+      roles:       ["Becario PEEES"],
+      link:        "",
+      link_texto:  "",
+      stats:       []
+    },
+    {
+      tipo:        "evento",
+      destacado:   false,
+      icono:       "✈️",
+      titulo:      "Expo Osaka 2025 — Japón",
+      fecha:       "2025",
+      lugar:       "Osaka, Japón",
+      descripcion: "Visité la Exposición Universal de Osaka para explorar las últimas tendencias en tecnología, innovación y el futuro que se está construyendo.",
+      roles:       ["Visitante", "Explorador tech"],
+      link:        "",
+      link_texto:  "",
+      stats:       []
+    }
+  ],
+
+  /* ── PROYECTOS ── */
+  proyectos: [
+    {
+      icono:       "⚙️",
+      titulo:      "Implementación Odoo ERP",
+      org:         "Vibamex · 2025–Presente",
+      descripcion: "Lidero la transformación digital completa: reingeniería de procesos, arquitectura de datos, ETL y dashboards para la mesa directiva.",
+      tags:        ["Odoo", "ETL", "Power BI", "SQL"],
+      link:        ""
+    },
+    {
+      icono:       "🎓",
+      titulo:      "Repositorio NVIDIA DLI",
+      org:         "CUGDL · 2025–2026",
+      descripcion: "7 notebooks pedagógicos de Deep Learning para 250 alumnos. Portal web con ruta de aprendizaje desde nivel cero hasta certificación oficial.",
+      tags:        ["TensorFlow", "Python", "Deep Learning"],
+      link:        "nvidia-dli/index.html"
+    },
+    {
+      icono:       "📈",
+      titulo:      "Análisis y Estrategia Digital",
+      org:         "MiMoDev · 2022–2025",
+      descripcion: "KPIs, dashboards estratégicos y reportes de datos para optimizar decisiones de negocio.",
+      tags:        ["Power BI", "Tableau", "Analytics"],
+      link:        ""
+    }
+  ],
+
+  /* ── TRAYECTORIA ── */
+  trayectoria: [
+    { fecha: "2025–2026", titulo: "Co-organizador NVIDIA DLI",         org: "CUGDL, UdeG",              icono: "🤖" },
+    { fecha: "2025–hoy",  titulo: "Líder de Proyecto — Odoo ERP",      org: "Vibamex",                   icono: "⚙️" },
+    { fecha: "2024–hoy",  titulo: "Lic. IA y Ciencia de los Datos",    org: "CUGDL, Universidad de GDL", icono: "🎓" },
+    { fecha: "2022–2025", titulo: "Analista de Datos",                  org: "MiMoDev",                   icono: "📊" },
+    { fecha: "2025",      titulo: "Expo Osaka · Japón",                 org: "Osaka, Japón",              icono: "✈️" },
+    { fecha: "2017–2022", titulo: "Lic. Negocios Internacionales",      org: "Universidad de GDL",        icono: "🌐" }
+  ],
+
+  /* ── SKILLS ── */
+  skills: ["Python","SQL","TensorFlow","Power BI","Odoo ERP","ETL","Jupyter","Deep Learning","Pandas","Excel Avanzado","Tableau","Data Architecture"]
+
+}; /* ← fin de la zona editable */
+
+
+/* ═══════════════════════════════════════════════════════
+   🎨  MOTOR DE RENDER — no tocar
+   ═══════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const safe = s => String(s);
+
+  /* ── meta ── */
+  document.title = `${ISAY.nombre} — ${ISAY.tagline}`;
+
+  /* ── masthead date ── */
+  const days = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const now = new Date();
+  document.getElementById('mast-date').textContent =
+    `${days[now.getDay()]}, ${now.getDate()} de ${months[now.getMonth()]} de ${now.getFullYear()}`;
+
+  /* ── profile ── */
+  document.getElementById('profile-img').src = ISAY.foto;
+  document.getElementById('profile-img').alt = ISAY.nombre_completo;
+  document.getElementById('hero-nombre').textContent  = ISAY.nombre;
+  document.getElementById('hero-headline').textContent = ISAY.headline;
+  document.getElementById('hero-tagline').textContent  = ISAY.tagline;
+  document.getElementById('hero-bio').textContent      = ISAY.bio;
+  document.getElementById('hero-ubicacion').textContent = ISAY.ubicacion;
+
+  /* ── social links ── */
+  const socLinks = {
+    'soc-ig':  `https://www.instagram.com/${ISAY.instagram}/`,
+    'soc-x':   `https://x.com/${ISAY.twitter}`,
+    'soc-li':  `https://www.linkedin.com/in/${ISAY.linkedin}`,
+    'soc-mail':`mailto:${ISAY.email}`,
+    'nav-ig':  `https://www.instagram.com/${ISAY.instagram}/`,
+    'nav-x':   `https://x.com/${ISAY.twitter}`,
+    'nav-li':  `https://www.linkedin.com/in/${ISAY.linkedin}`
+  };
+  Object.entries(socLinks).forEach(([id,href]) => {
+    const el = document.getElementById(id);
+    if(el) el.href = href;
+  });
+  document.getElementById('soc-ig-label').textContent  = `@${ISAY.instagram}`;
+  document.getElementById('soc-x-label').textContent   = `@${ISAY.twitter}`;
+  document.getElementById('footer-ig').textContent     = `@${ISAY.instagram}`;
+  document.getElementById('footer-x').textContent      = `@${ISAY.twitter}`;
+  document.getElementById('footer-nombre').textContent = ISAY.nombre_completo;
+  document.getElementById('footer-tagline').textContent = ISAY.tagline;
+  document.getElementById('footer-email').href         = `mailto:${ISAY.email}`;
+  document.getElementById('footer-email').textContent  = ISAY.email;
+
+  /* ── ahora ── */
+  document.getElementById('ahora-list').innerHTML = ISAY.ahora.map(a =>
+    `<div class="ahora-item"><span class="ahora-icono">${a.icono}</span><span>${esc(a.texto)}</span></div>`
+  ).join('');
+
+  /* ── skills ── */
+  document.getElementById('skills-list').innerHTML = ISAY.skills.map(s =>
+    `<span class="skill-tag">${esc(s)}</span>`
+  ).join('');
+
+  /* ── eventos destacados ── */
+  const destContainer = document.getElementById('eventos-destacados');
+  ISAY.eventos.filter(e=>e.destacado).forEach(ev => {
+    const statsHTML = ev.stats.length ? `<div class="ev-stats">${ev.stats.map(s=>`<div class="ev-stat"><span class="ev-stat-num">${esc(s.num)}</span><span class="ev-stat-label">${esc(s.label)}</span></div>`).join('')}</div>` : '';
+    const rolesHTML = ev.roles.map(r=>`<span class="role-chip">${esc(r)}</span>`).join('');
+    const linkHTML  = ev.link ? `<a href="${esc(ev.link)}" class="ev-cta"><i class="fas fa-arrow-right"></i> ${esc(ev.link_texto||'Ver más')}</a>` : '';
+    destContainer.innerHTML += `
+      <article class="ev-featured reveal">
+        <div class="ev-featured-label"><i class="fas fa-star"></i> Evento destacado</div>
+        <div class="ev-featured-inner">
+          <div class="ev-featured-content">
+            <div class="ev-roles">${rolesHTML}</div>
+            <h2 class="ev-featured-title">${esc(ev.titulo)}</h2>
+            <div class="ev-meta"><i class="fas fa-map-marker-alt"></i> ${esc(ev.lugar)} &nbsp;·&nbsp; <i class="fas fa-calendar"></i> ${esc(ev.fecha)}</div>
+            <p class="ev-desc">${safe(ev.descripcion)}</p>
+            ${statsHTML}
+            ${linkHTML}
+          </div>
+          <div class="ev-featured-badge">
+            <div class="badge-nvidia">NVIDIA<br/><span>DLI</span></div>
+            <div class="badge-cert">🏆<br/><small>Certificación<br/>Oficial</small></div>
+          </div>
         </div>
-        
-        <section id="journey" class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8 palette-text-dark">Mi Trayectoria Profesional y Académica</h2>
-            <div class="border-l-2 border-gray-300 ml-4 md:ml-0 md:mx-auto max-w-4xl relative">
-                <div class="mb-10 ml-8 relative timeline-item">
-                    <h3 class="text-xl font-bold palette-text-accent">Lic. en Inteligencia Artificial y Ciencia de los Datos</h3>
-                    <p class="text-md font-semibold text-gray-600">Universidad de Guadalajara (2024 - 2027)</p>
-                </div>
-                <div class="mb-10 ml-8 relative timeline-item">
-                    <h3 class="text-xl font-bold palette-text-accent">Líder de Proyecto Odoo</h3>
-                    <p class="text-md font-semibold text-gray-600">Vibamex (2025 - Presente)</p>
-                </div>
-                <div class="mb-10 ml-8 relative timeline-item">
-                    <h3 class="text-xl font-bold palette-text-accent">Analista de Datos y Estratega Digital</h3>
-                    <p class="text-md font-semibold text-gray-600">MiMoDev (2022 - 2025)</p>
-                </div>
-                <div class="mb-10 ml-8 relative timeline-item">
-                    <h3 class="text-xl font-bold palette-text-accent">Lic. en Negocios Internacionales</h3>
-                    <p class="text-md font-semibold text-gray-600">Universidad de Guadalajara (2017 - 2022)</p>
-                </div>
-            </div>
-        </section>
-        
-        <footer class="text-center py-8">
-            <h2 class="text-2xl font-bold palette-text-dark">Contactar</h2>
-            <p class="mt-2 text-lg">123miguelisay@gmail.com</p>
-            <a href="https://www.linkedin.com/in/miguel-morales7" target="_blank" class="inline-block mt-4 px-6 py-2 palette-bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-opacity-90 transition-colors">Ver Perfil de LinkedIn</a>
-        </footer>
+      </article>`;
+  });
 
+  /* ── eventos normales ── */
+  const gridContainer = document.getElementById('eventos-grid');
+  ISAY.eventos.filter(e=>!e.destacado).forEach(ev => {
+    const linkHTML = ev.link ? `<a href="${esc(ev.link)}" class="card-link" target="${ev.link.startsWith('http')?'_blank':'_self'}"><i class="fas fa-external-link-alt"></i> ${esc(ev.link_texto)}</a>` : '';
+    gridContainer.innerHTML += `
+      <article class="content-card reveal">
+        <div class="card-icon">${ev.icono}</div>
+        <div class="card-chip">${esc(ev.tipo)}</div>
+        <h3 class="card-title">${esc(ev.titulo)}</h3>
+        <div class="card-meta">${esc(ev.fecha)} · ${esc(ev.lugar)}</div>
+        <p class="card-desc">${safe(ev.descripcion)}</p>
+        ${linkHTML}
+      </article>`;
+  });
+
+  /* ── proyectos ── */
+  const projContainer = document.getElementById('proyectos-grid');
+  ISAY.proyectos.forEach(p => {
+    const tagsHTML = p.tags.map(t=>`<span class="mini-tag">${esc(t)}</span>`).join('');
+    const linkHTML = p.link ? `<a href="${esc(p.link)}" class="card-link"><i class="fas fa-arrow-right"></i> Ver proyecto</a>` : '';
+    projContainer.innerHTML += `
+      <article class="content-card reveal">
+        <div class="card-icon">${p.icono}</div>
+        <div class="card-chip">proyecto</div>
+        <h3 class="card-title">${esc(p.titulo)}</h3>
+        <div class="card-meta">${esc(p.org)}</div>
+        <p class="card-desc">${esc(p.descripcion)}</p>
+        <div class="mini-tags">${tagsHTML}</div>
+        ${linkHTML}
+      </article>`;
+  });
+
+  /* ── trayectoria ── */
+  document.getElementById('trayectoria-list').innerHTML = ISAY.trayectoria.map(t => `
+    <div class="tl-item reveal">
+      <div class="tl-icono">${t.icono}</div>
+      <div class="tl-content">
+        <div class="tl-fecha">${esc(t.fecha)}</div>
+        <div class="tl-titulo">${esc(t.titulo)}</div>
+        <div class="tl-org">${esc(t.org)}</div>
+      </div>
+    </div>`).join('');
+
+  /* ── reveal on scroll ── */
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }),
+    {threshold: 0.08}
+  );
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  /* ── mobile nav ── */
+  document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('#nav-menu a').forEach(a => a.addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.remove('open');
+  }));
+});
+</script>
+
+<style>
+/* ──────────────────────────────────────
+   VARIABLES Y RESET
+────────────────────────────────────── */
+:root {
+  --ink:     #0e0d0b;
+  --paper:   #f5f0e8;
+  --paper2:  #ede8de;
+  --paper3:  #e4ddd0;
+  --gold:    #b8860b;
+  --gold-lt: #d4a843;
+  --muted:   #7a7060;
+  --teal:    #1a7a68;
+  --red:     #8b1a1a;
+  --border:  rgba(14,13,11,0.12);
+  --border-strong: rgba(14,13,11,0.25);
+  --shadow:  0 2px 16px rgba(14,13,11,0.08);
+  --r:       8px;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+
+/* Paper texture via CSS grain */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  background-size: 180px;
+}
+* { position: relative; z-index: 1; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--paper2); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ──────────────────────────────────────
+   NAV
+────────────────────────────────────── */
+.nav-wrap {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(245,240,232,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-strong);
+}
+.nav-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.5rem; height: 56px;
+}
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800; font-size: 1.3rem; color: var(--ink);
+  text-decoration: none; letter-spacing: -0.5px;
+}
+.nav-brand span { color: var(--gold); }
+.nav-links-wrap { display: flex; align-items: center; gap: 2rem; }
+#nav-menu { display: flex; gap: 2rem; list-style: none; }
+#nav-menu a {
+  font-size: .82rem; font-weight: 600; color: var(--muted);
+  text-decoration: none; letter-spacing: .5px; text-transform: uppercase;
+  transition: color .2s;
+}
+#nav-menu a:hover { color: var(--gold); }
+.nav-socials { display: flex; gap: .5rem; }
+.nav-socials a {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; text-decoration: none; color: var(--muted);
+  border: 1px solid var(--border-strong); transition: all .2s;
+}
+.nav-socials a:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+#nav-toggle {
+  display: none; background: none; border: none;
+  font-size: 1.1rem; color: var(--ink); cursor: pointer;
+}
+
+/* ──────────────────────────────────────
+   MASTHEAD
+────────────────────────────────────── */
+.masthead {
+  max-width: 1160px; margin: 0 auto;
+  padding: 5rem 1.5rem 0;
+  text-align: center;
+}
+.mast-top {
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: .4rem 0;
+  font-size: .72rem; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: .75rem;
+}
+.mast-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 900; line-height: .95;
+  letter-spacing: -3px;
+  color: var(--ink);
+  margin-bottom: .4rem;
+}
+.mast-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(.95rem, 2.5vw, 1.25rem);
+  font-style: italic; color: var(--muted);
+  margin-bottom: .3rem;
+}
+.mast-tagline {
+  font-size: .78rem; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+}
+.mast-rule {
+  border: none; border-top: 3px double var(--ink);
+  margin: 1rem 0 0;
+}
+
+/* ──────────────────────────────────────
+   HERO — 3 COLUMN NEWSPAPER LAYOUT
+────────────────────────────────────── */
+.hero-grid {
+  max-width: 1160px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr 240px;
+  gap: 0;
+  border-bottom: 2px solid var(--ink);
+}
+.hero-col {
+  padding: 1.5rem;
+}
+.hero-col:not(:last-child) {
+  border-right: 1px solid var(--border-strong);
+}
+
+/* Left col — profile */
+.profile-photo-wrap {
+  width: 100%; aspect-ratio: 3/4;
+  overflow: hidden; border: 1px solid var(--border-strong);
+  margin-bottom: 1rem; background: var(--paper3);
+  position: relative;
+}
+.profile-photo-wrap img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  display: block;
+}
+.photo-caption {
+  font-size: .7rem; color: var(--muted); font-style: italic;
+  text-align: center; margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border); padding-bottom: .75rem;
+}
+.profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; font-weight: 800; line-height: 1.1;
+  margin-bottom: .25rem;
+}
+.profile-loc {
+  font-size: .75rem; color: var(--muted); font-weight: 500;
+  letter-spacing: .5px; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 5px;
+}
+.profile-bio {
+  font-size: .85rem; color: #3a3530; line-height: 1.65;
+  border-top: 1px solid var(--border); padding-top: .75rem;
+}
+
+/* Social links */
+.social-stack { display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; }
+.soc-item {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .45rem .7rem; border-radius: var(--r);
+  text-decoration: none; font-size: .82rem; font-weight: 600;
+  transition: all .2s; border: 1px solid transparent;
+}
+.soc-item i { font-size: .9rem; width: 16px; text-align: center; }
+.soc-ig  { color: #c13584; background: rgba(193,53,132,.06); border-color: rgba(193,53,132,.2); }
+.soc-ig:hover  { background: rgba(193,53,132,.14); transform: translateX(3px); }
+.soc-x   { color: #0f1419; background: rgba(15,20,25,.05); border-color: rgba(15,20,25,.18); }
+.soc-x:hover   { background: rgba(15,20,25,.12); transform: translateX(3px); }
+.soc-li  { color: #0a66c2; background: rgba(10,102,194,.06); border-color: rgba(10,102,194,.2); }
+.soc-li:hover  { background: rgba(10,102,194,.14); transform: translateX(3px); }
+.soc-mail{ color: var(--teal); background: rgba(26,122,104,.06); border-color: rgba(26,122,104,.2); }
+.soc-mail:hover{ background: rgba(26,122,104,.14); transform: translateX(3px); }
+.soc-label { font-size: .78rem; }
+
+/* Center col — featured content */
+.hero-center-title {
+  font-size: .65rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--border); padding-bottom: .5rem;
+  margin-bottom: 1rem;
+}
+.skills-cloud { display: flex; flex-wrap: wrap; gap: .4rem; }
+.skill-tag {
+  font-size: .72rem; font-weight: 600; letter-spacing: .3px;
+  padding: 3px 10px; border-radius: 3px;
+  background: var(--ink); color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Right col — ahora */
+.ahora-header {
+  font-size: .65rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--red);
+  border-bottom: 2px solid var(--red); padding-bottom: .5rem;
+  margin-bottom: 1rem;
+}
+.ahora-item {
+  display: flex; align-items: flex-start; gap: .6rem;
+  padding: .6rem 0; border-bottom: 1px dashed var(--border);
+  font-size: .82rem; line-height: 1.4; color: #2a2520;
+}
+.ahora-item:last-child { border-bottom: none; }
+.ahora-icono { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+/* ──────────────────────────────────────
+   SECTION CHROME
+────────────────────────────────────── */
+.page-section { max-width: 1160px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.section-header {
+  display: flex; align-items: baseline; gap: 1rem;
+  border-bottom: 2px solid var(--ink); margin-bottom: 1.5rem; padding-bottom: .4rem;
+}
+.section-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 800;
+}
+.section-sub {
+  font-size: .72rem; color: var(--muted); font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  margin-left: auto;
+}
+.full-rule { border: none; border-top: 1px solid var(--border-strong); margin: 0; }
+
+/* ──────────────────────────────────────
+   EVENTO DESTACADO
+────────────────────────────────────── */
+.ev-featured {
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--gold);
+  background: var(--paper2);
+  border-radius: var(--r);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+.ev-featured-label {
+  font-size: .68rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1rem; display: flex; align-items: center; gap: 6px;
+}
+.ev-featured-inner {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 2rem; align-items: start;
+}
+.ev-roles { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .75rem; }
+.role-chip {
+  font-size: .7rem; font-weight: 700; letter-spacing: .5px;
+  padding: 2px 10px; border-radius: 3px;
+  background: var(--ink); color: var(--paper);
+  text-transform: uppercase;
+}
+.ev-featured-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 3vw, 1.75rem);
+  font-weight: 800; line-height: 1.2;
+  margin-bottom: .5rem;
+}
+.ev-meta {
+  font-size: .78rem; color: var(--muted); font-weight: 500;
+  margin-bottom: .75rem; display: flex; align-items: center; gap: 4px; flex-wrap: wrap;
+}
+.ev-desc { font-size: .9rem; color: #3a3530; line-height: 1.7; margin-bottom: 1.25rem; }
+.ev-stats { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.ev-stat { text-align: center; }
+.ev-stat-num {
+  display: block; font-family: 'Playfair Display', serif;
+  font-size: 1.75rem; font-weight: 900; color: var(--ink); line-height: 1;
+}
+.ev-stat-label {
+  display: block; font-size: .65rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 1px; margin-top: 2px;
+}
+.ev-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--ink); color: var(--paper);
+  padding: .6rem 1.25rem; border-radius: 4px;
+  font-size: .82rem; font-weight: 700; text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.ev-cta:hover { background: var(--gold); transform: translateY(-1px); }
+.ev-featured-badge {
+  display: flex; flex-direction: column; align-items: center; gap: .75rem;
+}
+.badge-nvidia {
+  background: #76B900; color: #000;
+  padding: .75rem 1.25rem; border-radius: 6px;
+  font-weight: 900; font-size: 1rem; text-align: center; line-height: 1.2;
+  letter-spacing: 1px;
+}
+.badge-nvidia span { font-size: .75rem; display: block; }
+.badge-cert {
+  background: var(--paper3); border: 1px solid var(--border-strong);
+  border-radius: 6px; padding: .5rem .75rem; text-align: center;
+  font-size: .7rem; line-height: 1.5;
+}
+
+/* ──────────────────────────────────────
+   CONTENT CARDS GRID
+────────────────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.content-card {
+  background: var(--paper2); border: 1px solid var(--border-strong);
+  border-radius: var(--r); padding: 1.25rem;
+  transition: transform .2s, box-shadow .2s;
+}
+.content-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.card-icon { font-size: 1.75rem; margin-bottom: .5rem; }
+.card-chip {
+  display: inline-block; font-size: .62rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  background: var(--ink); color: var(--paper);
+  padding: 2px 8px; border-radius: 2px; margin-bottom: .6rem;
+}
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; font-weight: 800; line-height: 1.3;
+  margin-bottom: .3rem;
+}
+.card-meta { font-size: .75rem; color: var(--muted); margin-bottom: .6rem; }
+.card-desc { font-size: .83rem; color: #3a3530; line-height: 1.6; margin-bottom: .75rem; }
+.card-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .78rem; font-weight: 700; color: var(--gold);
+  text-decoration: none; transition: color .2s;
+}
+.card-link:hover { color: var(--ink); }
+.mini-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .6rem; }
+.mini-tag {
+  font-size: .68rem; padding: 2px 8px; border-radius: 2px;
+  background: var(--paper3); border: 1px solid var(--border-strong);
+  color: var(--muted); font-family: 'JetBrains Mono', monospace;
+}
+
+/* ──────────────────────────────────────
+   TRAYECTORIA
+────────────────────────────────────── */
+.tl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: .75rem;
+}
+.tl-item {
+  display: flex; align-items: flex-start; gap: .75rem;
+  padding: .9rem 1rem;
+  background: var(--paper2); border: 1px solid var(--border);
+  border-radius: var(--r);
+  transition: transform .2s;
+}
+.tl-item:hover { transform: translateY(-2px); }
+.tl-icono { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+.tl-fecha { font-size: .68rem; font-weight: 700; color: var(--gold); letter-spacing: .5px; text-transform: uppercase; margin-bottom: .15rem; }
+.tl-titulo { font-size: .88rem; font-weight: 700; line-height: 1.3; margin-bottom: .1rem; }
+.tl-org { font-size: .75rem; color: var(--muted); }
+
+/* ──────────────────────────────────────
+   FOOTER
+────────────────────────────────────── */
+footer {
+  background: var(--ink); color: var(--paper);
+  padding: 2.5rem 1.5rem; text-align: center;
+  border-top: 3px solid var(--gold);
+}
+.footer-inner { max-width: 1160px; margin: 0 auto; }
+.footer-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem; font-weight: 900; margin-bottom: .25rem;
+}
+.footer-tagline { color: var(--gold); font-size: .8rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem; }
+.footer-socials { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.footer-soc {
+  display: flex; align-items: center; gap: 7px;
+  padding: .5rem 1rem; border-radius: 4px;
+  text-decoration: none; font-size: .82rem; font-weight: 600;
+  border: 1px solid rgba(245,240,232,.2); color: var(--paper);
+  transition: all .2s;
+}
+.footer-soc:hover { background: rgba(245,240,232,.1); border-color: var(--gold); color: var(--gold); }
+.footer-copy { font-size: .72rem; color: rgba(245,240,232,.4); margin-top: .5rem; }
+footer a { color: var(--gold-lt); text-decoration: none; }
+
+/* ──────────────────────────────────────
+   REVEAL ANIMATION
+────────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ──────────────────────────────────────
+   RESPONSIVE
+────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-col:not(:last-child) { border-right: none; border-bottom: 1px solid var(--border-strong); }
+  .profile-photo-wrap { aspect-ratio: 4/3; max-height: 300px; }
+  .ev-featured-inner { grid-template-columns: 1fr; }
+  .ev-featured-badge { flex-direction: row; }
+}
+@media (max-width: 640px) {
+  #nav-menu { display: none; flex-direction: column; }
+  #nav-menu.open {
+    display: flex; position: absolute; top: 56px; left: 0; right: 0;
+    background: var(--paper); padding: 1rem 1.5rem;
+    border-bottom: 2px solid var(--ink); gap: .75rem;
+  }
+  #nav-toggle { display: block; }
+  .mast-title { letter-spacing: -2px; }
+  .mast-top span:nth-child(2) { display: none; }
+}
+</style>
+
+<!-- ═══════════ HTML STRUCTURE ═══════════ -->
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Isay<span>.</span></a>
+    <div class="nav-links-wrap">
+      <ul id="nav-menu">
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#trayectoria">Trayectoria</a></li>
+      </ul>
+      <div class="nav-socials">
+        <a id="nav-ig" href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a id="nav-x"  href="#" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+        <a id="nav-li" href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <button id="nav-toggle"><i class="fas fa-bars"></i></button>
     </div>
+  </div>
+</div>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="mast-top">
+    <span>isay.github.io</span>
+    <span id="mast-date"></span>
+    <span>GDL · MX 🇲🇽</span>
+  </div>
+  <h1 class="mast-title" id="hero-nombre"></h1>
+  <p class="mast-headline" id="hero-headline"></p>
+  <p class="mast-tagline"  id="hero-tagline"></p>
+  <hr class="mast-rule"/>
+</div>
+
+<!-- HERO 3-COL -->
+<div class="hero-grid">
+
+  <!-- LEFT: Profile -->
+  <div class="hero-col">
+    <div class="profile-photo-wrap">
+      <img id="profile-img" src="" alt=""/>
+    </div>
+    <p class="photo-caption">Osaka, Japón · 2025</p>
+    <div class="profile-name" id="hero-nombre2">Isay</div>
+    <div class="profile-loc"><i class="fas fa-map-marker-alt"></i> <span id="hero-ubicacion"></span></div>
+    <p class="profile-bio" id="hero-bio"></p>
+    <div class="social-stack">
+      <a id="soc-ig"   href="#" target="_blank" class="soc-item soc-ig"><i class="fab fa-instagram"></i><span class="soc-label" id="soc-ig-label"></span></a>
+      <a id="soc-x"    href="#" target="_blank" class="soc-item soc-x"><i class="fab fa-x-twitter"></i><span class="soc-label" id="soc-x-label"></span></a>
+      <a id="soc-li"   href="#" target="_blank" class="soc-item soc-li"><i class="fab fa-linkedin"></i><span class="soc-label">LinkedIn</span></a>
+      <a id="soc-mail" href="#"                 class="soc-item soc-mail"><i class="fas fa-envelope"></i><span class="soc-label">Email</span></a>
+    </div>
+  </div>
+
+  <!-- CENTER: Skills -->
+  <div class="hero-col">
+    <div class="hero-center-title">Stack tecnológico</div>
+    <div class="skills-cloud" id="skills-list"></div>
+    <div style="margin-top:1.5rem; border-top:1px dashed var(--border); padding-top:1rem;">
+      <div class="hero-center-title">Sobre mí</div>
+      <p style="font-size:.87rem;color:#3a3530;line-height:1.7" id="hero-bio2"></p>
+    </div>
+  </div>
+
+  <!-- RIGHT: Ahora -->
+  <div class="hero-col">
+    <div class="ahora-header">● En este momento</div>
+    <div id="ahora-list"></div>
+  </div>
+
+</div>
+
+<hr class="full-rule"/>
+
+<!-- EVENTOS -->
+<section class="page-section" id="eventos">
+  <div class="section-header">
+    <span class="section-label">Eventos & Actividades</span>
+    <span class="section-sub">Lo que organizo y en lo que participo</span>
+  </div>
+  <div id="eventos-destacados"></div>
+  <div class="cards-grid" id="eventos-grid"></div>
+</section>
+
+<hr class="full-rule"/>
+
+<!-- PROYECTOS -->
+<section class="page-section" id="proyectos">
+  <div class="section-header">
+    <span class="section-label">Proyectos</span>
+    <span class="section-sub">Trabajo real, impacto real</span>
+  </div>
+  <div class="cards-grid" id="proyectos-grid"></div>
+</section>
+
+<hr class="full-rule"/>
+
+<!-- TRAYECTORIA -->
+<section class="page-section" id="trayectoria">
+  <div class="section-header">
+    <span class="section-label">Trayectoria</span>
+    <span class="section-sub">Académica y profesional</span>
+  </div>
+  <div class="tl-grid" id="trayectoria-list"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name" id="footer-nombre"></div>
+    <div class="footer-tagline" id="footer-tagline"></div>
+    <div class="footer-socials">
+      <a href="#" id="soc-ig2"   target="_blank" class="footer-soc"><i class="fab fa-instagram"></i> <span id="footer-ig"></span></a>
+      <a href="#" id="soc-x2"    target="_blank" class="footer-soc"><i class="fab fa-x-twitter"></i> <span id="footer-x"></span></a>
+      <a href="#" id="soc-li2"   target="_blank" class="footer-soc"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#" id="footer-email" class="footer-soc"><i class="fas fa-envelope"></i> <span></span></a>
+    </div>
+    <div class="footer-copy">© 2026 Miguel Isay Morales Cortes · Hecho con ☕ desde GDL 🇲🇽</div>
+  </div>
+</footer>
+
+<script>
+// Duplicate bio to center col
+document.addEventListener('DOMContentLoaded', () => {
+  const bio = document.getElementById('hero-bio');
+  const bio2 = document.getElementById('hero-bio2');
+  if(bio && bio2) bio2.textContent = bio.textContent;
+
+  // footer social links
+  document.getElementById('soc-ig2').href = document.getElementById('soc-ig').href;
+  document.getElementById('soc-x2').href  = document.getElementById('soc-x').href;
+  document.getElementById('soc-li2').href = document.getElementById('soc-li').href;
+});
+</script>
 
 </body>
 </html>
