@@ -284,34 +284,55 @@
     .footer-back { color: rgba(245,240,232,.5); font-size: .8rem; }
     .footer-back a { color: var(--gold-lt); text-decoration: none; }
     .footer-back a:hover { text-decoration: underline; }
-
-    /* ── DESCARGA ── */
-    .download-card {
-      background: var(--excel); color: #fff;
-      border-radius: var(--r); padding: 1.25rem; margin-bottom: 1.25rem;
+  
+    /* ── NAV UNIFIED ── */
+    .nav-wrap {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(245,240,232,0.94); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(14,13,11,0.25);
     }
-    .download-card .card-label {
-      font-size: .65rem; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: .75rem;
+    .nav-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1.5rem; height: 56px;
     }
-    .download-card p {
-      font-size: .82rem; color: rgba(255,255,255,.75); line-height: 1.6; margin-bottom: .9rem;
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 1.2rem; color: #0e0d0b;
+      text-decoration: none; letter-spacing: -0.5px;
     }
-    .download-btn {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: #fff; color: var(--excel);
-      font-size: .82rem; font-weight: 800; letter-spacing: .3px;
-      padding: .6rem 1rem; border-radius: 5px; text-decoration: none;
-      transition: opacity .2s;
-    }
-    .download-btn:hover { opacity: .88; }
-    .download-btn-secondary {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      color: rgba(255,255,255,.75); font-size: .78rem; font-weight: 600;
-      text-decoration: none; margin-top: .6rem;
+    .nav-brand span { color: #b8860b; }
+    .nav-links-wrap { display: flex; align-items: center; gap: 1.5rem; }
+    #nav-menu { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    #nav-menu a {
+      font-size: .78rem; font-weight: 600; color: #7a7060;
+      text-decoration: none; letter-spacing: .5px; text-transform: uppercase;
       transition: color .2s;
     }
-    .download-btn-secondary:hover { color: #fff; }
+    #nav-menu a:hover { color: #b8860b; }
+    .nav-socials { display: flex; gap: .4rem; }
+    .nav-socials a {
+      width: 30px; height: 30px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .78rem; text-decoration: none; color: #7a7060;
+      border: 1px solid rgba(14,13,11,0.25); transition: all .2s;
+    }
+    .nav-socials a:hover { background: #0e0d0b; color: #f5f0e8; border-color: #0e0d0b; }
+    #nav-toggle {
+      display: none; background: none; border: none;
+      font-size: 1.1rem; color: #0e0d0b; cursor: pointer;
+    }
+    @media (max-width: 640px) {
+      #nav-menu { display: none; flex-direction: column; }
+      #nav-menu.open {
+        display: flex; position: absolute; top: 56px; left: 0; right: 0;
+        background: #f5f0e8; padding: 1rem 1.5rem;
+        border-bottom: 2px solid #0e0d0b; gap: .75rem; z-index: 200;
+      }
+      #nav-toggle { display: block; }
+      .nav-socials { display: none; }
+    }
+
   </style>
 </head>
 <body>
@@ -320,9 +341,20 @@
 <div class="nav-wrap">
   <div class="nav-inner">
     <a href="../index.html" class="nav-brand">Isay<span>.</span></a>
-    <div class="nav-right">
-      <span class="nav-chip">📗 Clase 1</span>
-      <a href="../index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Inicio</a>
+    <div class="nav-links-wrap">
+      <ul id="nav-menu">
+        <li><a href="../index.html#semana">Esta Semana</a></li>
+        <li><a href="../index.html#eventos">Eventos</a></li>
+        <li><a href="../taller-excel/index.html">Taller Excel</a></li>
+        <li><a href="../nvidia-dli/index.html">NVIDIA DLI</a></li>
+        <li><a href="../oracle-apex/index.html">Oracle APEX</a></li>
+      </ul>
+      <div class="nav-socials">
+        <a id="nav-ig" href="https://www.instagram.com/miguel_isay/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a id="nav-x"  href="https://x.com/miguel_isay" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+        <a id="nav-li" href="https://www.linkedin.com/in/miguel-morales7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <button id="nav-toggle"><i class="fas fa-bars"></i></button>
     </div>
   </div>
 </div>
@@ -621,22 +653,18 @@
       <div class="sidebar-col">
 
         
-        <div class="download-card">
-          <div class="card-label">📥 Papel de trabajo</div>
-          <p>Archivo con los ejercicios de la clase. Ábrelo en Excel antes de la sesión.</p>
-          <a class="download-btn"
-             href="https://docs.google.com/spreadsheets/d/1YEMXeNPuSNm3TmH7S92qBSgmhlUr2jxe/export?format=xlsx"
-             download="Practica_1_Ejercicio_clase.xlsx">
-            <i class="fas fa-download"></i> Descargar .xlsx
-          </a>
-          <a class="download-btn-secondary"
-             href="https://docs.google.com/spreadsheets/d/1YEMXeNPuSNm3TmH7S92qBSgmhlUr2jxe/edit?usp=sharing"
-             target="_blank">
-            <i class="fas fa-external-link-alt"></i> Abrir en Google Sheets
+        <div class="sidebar-card" style="background:var(--excel);border:none;">
+          <div class="card-label" style="color:rgba(255,255,255,.8);">📥 Papel de trabajo</div>
+          <p style="color:#fff;font-size:.82rem;margin-bottom:.9rem;">Descarga la hoja de Excel usada en clase para practicar los ejercicios.</p>
+          <a href="https://docs.google.com/spreadsheets/d/1YEMXeNPuSNm3TmH7S92qBSgmhlUr2jxe/edit?usp=sharing" target="_blank"
+             style="display:block;text-align:center;background:#fff;color:var(--excel);
+                    font-weight:700;font-size:.8rem;padding:.55rem 1rem;border-radius:4px;
+                    text-decoration:none;letter-spacing:.5px;">
+            Abrir en Google Sheets ↗
           </a>
         </div>
-        
-        <div class="sidebar-card">
+
+<div class="sidebar-card">
           <div class="card-label">📋 Clase 1 en resumen</div>
           <p>Referencias · Operadores · Jerarquía · Funciones básicas · Auditoría de errores.</p>
         </div>
@@ -695,5 +723,17 @@
   </div>
 </footer>
 
+<script>
+  /* ── mobile nav toggle ── */
+  const navToggle = document.getElementById('nav-toggle');
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+    document.querySelectorAll('#nav-menu a').forEach(a => a.addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.remove('open');
+    }));
+  }
+</script>
 </body>
 </html>
