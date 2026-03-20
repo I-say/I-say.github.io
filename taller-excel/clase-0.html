@@ -236,6 +236,55 @@
     .footer-back { color: rgba(245,240,232,.5); font-size: .8rem; }
     .footer-back a { color: var(--gold-lt); text-decoration: none; }
     .footer-back a:hover { text-decoration: underline; }
+  
+    /* ── NAV UNIFIED ── */
+    .nav-wrap {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(245,240,232,0.94); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(14,13,11,0.25);
+    }
+    .nav-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1.5rem; height: 56px;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 1.2rem; color: #0e0d0b;
+      text-decoration: none; letter-spacing: -0.5px;
+    }
+    .nav-brand span { color: #b8860b; }
+    .nav-links-wrap { display: flex; align-items: center; gap: 1.5rem; }
+    #nav-menu { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    #nav-menu a {
+      font-size: .78rem; font-weight: 600; color: #7a7060;
+      text-decoration: none; letter-spacing: .5px; text-transform: uppercase;
+      transition: color .2s;
+    }
+    #nav-menu a:hover { color: #b8860b; }
+    .nav-socials { display: flex; gap: .4rem; }
+    .nav-socials a {
+      width: 30px; height: 30px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .78rem; text-decoration: none; color: #7a7060;
+      border: 1px solid rgba(14,13,11,0.25); transition: all .2s;
+    }
+    .nav-socials a:hover { background: #0e0d0b; color: #f5f0e8; border-color: #0e0d0b; }
+    #nav-toggle {
+      display: none; background: none; border: none;
+      font-size: 1.1rem; color: #0e0d0b; cursor: pointer;
+    }
+    @media (max-width: 640px) {
+      #nav-menu { display: none; flex-direction: column; }
+      #nav-menu.open {
+        display: flex; position: absolute; top: 56px; left: 0; right: 0;
+        background: #f5f0e8; padding: 1rem 1.5rem;
+        border-bottom: 2px solid #0e0d0b; gap: .75rem; z-index: 200;
+      }
+      #nav-toggle { display: block; }
+      .nav-socials { display: none; }
+    }
+
   </style>
 </head>
 <body>
