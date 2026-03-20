@@ -1,280 +1,324 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Isay — Data Science · GDL 🇲🇽</title>
-  <meta name="description" content="I work with models — the machine learning kind. Data Science · GDL 🇲🇽" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="description" content="I work with models — the machine learning kind. Data Science · GDL 🇲🇽"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
-
 <body>
 
-  <script>
-    /* ═══════════════════════════════════════════════════════
-       ✏️  ZONA EDITABLE — todo el contenido está aquí
-       ═══════════════════════════════════════════════════════ */
+<script>
+/* ═══════════════════════════════════════════════════════
+   ✏️  ZONA EDITABLE — todo el contenido está aquí
+   ═══════════════════════════════════════════════════════
+   Modifica solo este bloque. El diseño se actualiza solo.
+   Para agregar un evento/proyecto: copia un bloque
+   existente, pégalo y cambia los campos.
+   ═══════════════════════════════════════════════════════ */
 
-    const ISAY = {
+const ISAY = {
 
-      /* ── IDENTIDAD ── */
-      nombre: "Isay",
-      nombre_completo: "Miguel Isay Morales Cortes",
-      headline: "I work with models — the machine learning kind.",
-      tagline: "Data Science · GDL 🇲🇽",
-      bio: "Estudiante de IA y Ciencia de Datos en CUGDL (UdeG). Me encanta trabajar con excel, pero mas enseñarlo(mandame mensaje y coordinamos una asesoria). me gusta conectar con personas que es guste la tecnologia, ver una buena pelicula o perderserse caminando escuchando una cancion (de preferencia twice)."coordinador\": Me puedes encontrar en el cine, programando, creando un dashboard,  armando una tabla dinamica o jugando una reta de futbol.
+  /* ── IDENTIDAD ── */
+  nombre:    "Isay",
+  nombre_completo: "Miguel Isay Morales Cortes",
+  headline:  "I work with models — the machine learning kind.",
+  tagline:   "Data Science · GDL 🇲🇽",
+  bio: "Estudiante de IA y Ciencia de Datos en CUGDL (UdeG). Construyo sistemas reales, organizo eventos tech y enseño lo que aprendo. Siempre al día en tecnología, IA y todo lo que viene."coordinador\": soy fan del anime y la cultura japonesa, consumo podcasts sobre tecnología e historia, edito videos, viajo cuando el presupuesto lo permite y tengo una relación complicada con mi backlog de videojuegos. Steam me juzga más de lo que me gustaría admitir.
 
-La tecnología me interesa como medio, no como fin.Quiero que la gente brille más y tenga más y mejores oportunidades",
+La tecnología me interesa como palanca, no como fin. Para que la gente aprenda más rápido, brille más y tenga más oportunidades de las que encontró cuando empezó.",
 
+  /* ── FOTO DE PERFIL ──
+     Pon tu foto como "img/profile.jpg" en tu repo de GitHub
+     y se mostrará automáticamente. */
   foto: "img/profile.jpg",
 
-      /* ── REDES ── */
-      instagram: "miguel_isay",
-      twitter: "miguel_isay",
-      linkedin: "miguel-morales7",
-      email: "123miguelisay@gmail.com",
-      ubicacion: "Guadalajara, Jalisco · México",
+  /* ── REDES Y CONTACTO ── */
+  instagram: "miguel_isay",
+  twitter:   "miguel_isay",
+  linkedin:  "miguel-morales7",
+  email:     "123miguelisay@gmail.com",
+  ubicacion: "Guadalajara, Jalisco · México",
 
-      /* ── AHORA ── */
-      ahora: [
-        { icono: "🎓", texto: "Organizando NVIDIA DLI para 250 alumnos en CUGDL" },
-        { icono: "⚙️", texto: "Liderando implementación Odoo ERP en Vibamex" },
-        { icono: "📚", texto: "4er semestre de IA y Ciencia de Datos · UdeG" },
-        { icono: "🌐", texto: "Organizando visita a el bootcamp de oracle Ape" },
-        { icono: "", texto: "Dando clases de excel en el CUGDL" }
+  /* ── QUÉ ESTOY HACIENDO AHORA ──
+     Actualiza esto cada vez que cambies de proyecto o foco. */
+  ahora: [
+    { icono: "🎓", texto: "Organizando NVIDIA DLI para 250 alumnos en CUGDL" },
+    { icono: "⚙️", texto: "Liderando implementación Odoo ERP en Vibamex" },
+    { icono: "📚", texto: "3er semestre de IA y Ciencia de Datos · UdeG" },
+    { icono: "🌐", texto: "Repasando inglés y expandiendo redes internacionales" }
+  ],
 
-      ],
+  /* ── EVENTOS Y ACTIVIDADES ──
+     ─────────────────────────────────────────────────────
+     Para agregar uno nuevo, copia este bloque:
 
-      /* ── EVENTOS ── */
-      eventos: [
-        {
-          tipo: "evento",
-          destacado: false,
-          icono: "🔴",
-          titulo: "Oracle APEX Bootcamp 2026 · GDL",
-          fecha: "2026",
-          lugar: "Oracle MDC · Guadalajara",
-          descripcion: "Coordiné la asistencia de la comunidad CUGDL al bootcamp oficial de Oracle APEX en Guadalajara — una jornada intensiva de desarrollo low-code con IA generativa, REST services, UX y seguridad, con Product Managers de Oracle.",
-          roles: ["Coordinador de comunidad", "Asistente"],
-          link: "oracle-apex/index.html",
-          link_texto: "Leer artículo",
-          stats: []
-        },
-        {
-          tipo: "evento",
-          destacado: true,
-          icono: "🤖",
-          titulo: "Fundamentos del Deep Learning — CUGDL × NVIDIA",
-          fecha: "2025 — 2026",
-          lugar: "CUGDL, Universidad de Guadalajara · Puerto Vallarta",
-          descripcion: "Apoyo en la organización del curso oficial de NVIDIA DLI para 250 alumnos de 5 carreras del CUGDL. El objetivo: que cualquier estudiante, sin importar su carrera, pueda certificarse en Deep Learning.",
-          roles: ["Organizador", "Participante", "Difusor"],
-          link: "nvidia-dli/index.html",
-          link_texto: "Ver portal del curso",
-          stats: [
-            { num: "250", label: "Lugares" },
-            { num: "5", label: "Carreras" },
-            { num: "8h", label: "Duración" },
-            { num: "1", label: "Certificación" }
-          ]
-        },
-        {
-          tipo: "taller",
-          destacado: false,
-          icono: "📗",
-          titulo: "Taller de Excel · Edición 2026",
-          fecha: "2026",
-          lugar: "CUGDL",
-          descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — próximamente más información sobre este taller.",
-          roles: ["Instructor"],
-          link: "taller-excel/index.html",
-          link_texto: "Ver clases",
-          stats: []
-        },
-        {
-          tipo: "taller",
-          destacado: false,
-          icono: "📊",
-          titulo: "Taller Excel Avanzado & Power BI",
-          fecha: "2023 — 2024",
-          lugar: "CUGDL",
-          descripcion: "Capacité a más de 60 estudiantes en herramientas de análisis de datos y visualización profesional.",
-          roles: ["Instructor"],
-          link: "",
-          link_texto: "",
-          stats: []
-        },
-        {
-          tipo: "logro",
-          destacado: false,
-          icono: "🏆",
-          titulo: "Programa PEEES — UdeG",
-          fecha: "2024",
-          lugar: "Universidad de Guadalajara",
-          descripcion: "Seleccionado por alto potencial de liderazgo y desempeño académico sobresaliente.",
-          roles: ["Becario PEEES"],
-          link: "",
-          link_texto: "",
-          stats: []
-        },
-        {
-          tipo: "evento",
-          destacado: false,
-          icono: "✈️",
-          titulo: "Expo Osaka 2025 — Japón",
-          fecha: "2025",
-          lugar: "Osaka, Japón",
-          descripcion: "Visité la Exposición Universal de Osaka para explorar las últimas tendencias en tecnología, innovación y el futuro que se está construyendo.",
-          roles: ["Visitante", "Explorador tech"],
-          link: "",
-          link_texto: "",
-          stats: []
-        }
-      ],
-
-      /* ── PROYECTOS ── */
-      proyectos: [
-        {
-          icono: "⚙️",
-          titulo: "Implementación Odoo ERP",
-          org: "Vibamex · 2025–Presente",
-          descripcion: "Lidero la transformación digital completa: reingeniería de procesos, arquitectura de datos, ETL y dashboards para la mesa directiva.",
-          tags: ["Odoo", "ETL", "Power BI", "SQL"],
-          link: ""
-        },
-        {
-          icono: "🎓",
-          titulo: "Repositorio NVIDIA DLI",
-          org: "CUGDL · 2025–2026",
-          descripcion: "7 notebooks pedagógicos de Deep Learning para 250 alumnos. Portal web con ruta de aprendizaje desde nivel cero hasta certificación oficial.",
-          tags: ["TensorFlow", "Python", "Deep Learning"],
-          link: "nvidia-dli/index.html"
-        },
-        {
-          icono: "📈",
-          titulo: "Análisis y Estrategia Digital",
-          org: "MiMoDev · 2022–2025",
-          descripcion: "KPIs, dashboards estratégicos y reportes de datos para optimizar decisiones de negocio.",
-          tags: ["Power BI", "Tableau", "Analytics"],
-          link: ""
-        }
-      ],
-
-      /* ── TRAYECTORIA ── */
-      trayectoria: [
-        { fecha: "2025–2026", titulo: "Co-organizador NVIDIA DLI", org: "CUGDL, UdeG", icono: "🤖" },
-        { fecha: "2025–hoy", titulo: "Líder de Proyecto — Odoo ERP", org: "Vibamex", icono: "⚙️" },
-        { fecha: "2024–hoy", titulo: "Lic. IA y Ciencia de los Datos", org: "CUGDL, Universidad de GDL", icono: "🎓" },
-        { fecha: "2022–2025", titulo: "Analista de Datos", org: "MiMoDev", icono: "📊" },
-        { fecha: "2025", titulo: "Expo Osaka · Japón", org: "Osaka, Japón", icono: "✈️" },
-        { fecha: "2017–2022", titulo: "Lic. Negocios Internacionales", org: "Universidad de GDL", icono: "🌐" }
-      ],
-
-      /* ── SKILLS ── */
-      skills: ["Python", "SQL", "TensorFlow", "Power BI", "Odoo ERP", "ETL", "Jupyter", "Deep Learning", "Pandas", "Excel Avanzado", "Tableau", "Data Architecture"],
-
-      /* ── ESTA SEMANA ──
-         REGLA: NUNCA borres un volumen anterior. Solo AGREGA uno nuevo al INICIO del array.
-         El más reciente va en index 0. Las flechas ◀ ▶ permiten navegar el historial. */
-      semanas: [
-        {
-          numero: "Vol. 00",
-          fecha: "Semana de ejemplo · 2026",
-          intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          noticias: [
-            {
-              titulo: "Lorem ipsum noticia uno",
-              fuente: "Fuente · Fecha",
-              desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-            },
-            {
-              titulo: "Lorem ipsum noticia dos",
-              fuente: "Fuente · Fecha",
-              desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-            },
-            {
-              titulo: "Lorem ipsum noticia tres",
-              fuente: "Fuente · Fecha",
-              desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            }
-          ],
-          pelicula: {
-            titulo: "Lorem Ipsum: La Película",
-            año: "0000",
-            nota: "Lorem ipsum dolor sit amet — consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-          }
-        }
+     ,{
+       tipo:        "evento",          // "evento" | "logro" | "taller"
+       destacado:   false,             // true = tarjeta grande
+       icono:       "🎯",
+       titulo:      "Nombre del evento",
+       fecha:       "2026",
+       lugar:       "Lugar",
+       descripcion: "Descripción.",
+       roles:       ["Tu rol"],
+       link:        "",                // URL o "" si no hay
+       link_texto:  "Ver más",
+       stats:       []                 // [{num:"X", label:"Y"}] o []
+     }
+     ───────────────────────────────────────────────────── */
+  eventos: [
+    {
+      tipo:        "evento",
+      destacado:   false,
+      icono:       "🔴",
+      titulo:      "Oracle APEX Bootcamp 2026 · GDL",
+      fecha:       "2026",
+      lugar:       "Oracle MDC · Guadalajara",
+      descripcion: "Coordiné la asistencia de la comunidad CUGDL al bootcamp oficial de Oracle APEX en Guadalajara — una jornada intensiva de desarrollo low-code con IA generativa, REST services, UX y seguridad, con Product Managers de Oracle.",
+      roles:       ["Coordinador de comunidad", "Asistente"],
+      link:        "oracle-apex/index.html",
+      link_texto:  "Leer artículo",
+      stats:       []
+    },
+    {
+      tipo:        "evento",
+      destacado:   true,
+      icono:       "🤖",
+      titulo:      "Fundamentos del Deep Learning — CUGDL × NVIDIA",
+      fecha:       "2025 — 2026",
+      lugar:       "CUGDL, Universidad de Guadalajara · Puerto Vallarta",
+      descripcion: "Apoyo en la organización del curso oficial de NVIDIA DLI para 250 alumnos de 5 carreras del CUGDL. El objetivo: que cualquier estudiante, sin importar su carrera, pueda certificarse en Deep Learning.",
+      roles:       ["Organizador", "Participante", "Difusor"],
+      link:        "nvidia-dli/index.html",
+      link_texto:  "Ver portal del curso",
+      stats:       [
+        { num: "250",  label: "Lugares" },
+        { num: "5",    label: "Carreras" },
+        { num: "8h",   label: "Duración" },
+        { num: "1",    label: "Certificación" }
       ]
+    },
+    {
+      tipo:        "taller",
+      destacado:   false,
+      icono:       "📗",
+      titulo:      "Taller de Excel · Edición 2026",
+      fecha:       "2026",
+      lugar:       "CUGDL",
+      descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — próximamente más información sobre este taller.",
+      roles:       ["Instructor"],
+      link:        "taller-excel/index.html",
+      link_texto:  "Ver clases",
+      stats:       []
+    },
+    {
+      tipo:        "taller",
+      destacado:   false,
+      icono:       "📊",
+      titulo:      "Taller Excel Avanzado & Power BI",
+      fecha:       "2023 — 2024",
+      lugar:       "CUGDL",
+      descripcion: "Capacité a más de 60 estudiantes en herramientas de análisis de datos y visualización profesional.",
+      roles:       ["Instructor"],
+      link:        "",
+      link_texto:  "",
+      stats:       []
+    },
+    {
+      tipo:        "logro",
+      destacado:   false,
+      icono:       "🏆",
+      titulo:      "Programa PEEES — UdeG",
+      fecha:       "2024",
+      lugar:       "Universidad de Guadalajara",
+      descripcion: "Seleccionado por alto potencial de liderazgo y desempeño académico sobresaliente.",
+      roles:       ["Becario PEEES"],
+      link:        "",
+      link_texto:  "",
+      stats:       []
+    },
+    {
+      tipo:        "evento",
+      destacado:   false,
+      icono:       "✈️",
+      titulo:      "Expo Osaka 2025 — Japón",
+      fecha:       "2025",
+      lugar:       "Osaka, Japón",
+      descripcion: "Visité la Exposición Universal de Osaka para explorar las últimas tendencias en tecnología, innovación y el futuro que se está construyendo.",
+      roles:       ["Visitante", "Explorador tech"],
+      link:        "",
+      link_texto:  "",
+      stats:       []
+    }
+  ],
 
-    }; /* ← fin de la zona editable */
+  /* ── PROYECTOS ── */
+  proyectos: [
+    {
+      icono:       "⚙️",
+      titulo:      "Implementación Odoo ERP",
+      org:         "Vibamex · 2025–Presente",
+      descripcion: "Lidero la transformación digital completa: reingeniería de procesos, arquitectura de datos, ETL y dashboards para la mesa directiva.",
+      tags:        ["Odoo", "ETL", "Power BI", "SQL"],
+      link:        ""
+    },
+    {
+      icono:       "🎓",
+      titulo:      "Repositorio NVIDIA DLI",
+      org:         "CUGDL · 2025–2026",
+      descripcion: "7 notebooks pedagógicos de Deep Learning para 250 alumnos. Portal web con ruta de aprendizaje desde nivel cero hasta certificación oficial.",
+      tags:        ["TensorFlow", "Python", "Deep Learning"],
+      link:        "nvidia-dli/index.html"
+    },
+    {
+      icono:       "📈",
+      titulo:      "Análisis y Estrategia Digital",
+      org:         "MiMoDev · 2022–2025",
+      descripcion: "KPIs, dashboards estratégicos y reportes de datos para optimizar decisiones de negocio.",
+      tags:        ["Power BI", "Tableau", "Analytics"],
+      link:        ""
+    }
+  ],
+
+  /* ── TRAYECTORIA ── */
+  trayectoria: [
+    { fecha: "2025–2026", titulo: "Co-organizador NVIDIA DLI",         org: "CUGDL, UdeG",              icono: "🤖" },
+    { fecha: "2025–hoy",  titulo: "Líder de Proyecto — Odoo ERP",      org: "Vibamex",                   icono: "⚙️" },
+    { fecha: "2024–hoy",  titulo: "Lic. IA y Ciencia de los Datos",    org: "CUGDL, Universidad de GDL", icono: "🎓" },
+    { fecha: "2022–2025", titulo: "Analista de Datos",                  org: "MiMoDev",                   icono: "📊" },
+    { fecha: "2025",      titulo: "Expo Osaka · Japón",                 org: "Osaka, Japón",              icono: "✈️" },
+    { fecha: "2017–2022", titulo: "Lic. Negocios Internacionales",      org: "Universidad de GDL",        icono: "🌐" }
+  ],
+
+  /* ── SKILLS ── */
+  skills: ["Python","SQL","TensorFlow","Power BI","Odoo ERP","ETL","Jupyter","Deep Learning","Pandas","Excel Avanzado","Tableau","Data Architecture"],
+
+  /* ── ESTA SEMANA ──
+     ─────────────────────────────────────────────────────
+     REGLA: NUNCA borres un volumen anterior. Solo AGREGA
+     uno nuevo al INICIO del array (index 0 = más reciente).
+     La página mostrará el más reciente por defecto y las
+     flechas ◀ ▶ permiten navegar el historial completo.
+
+     Para agregar la semana nueva, COPIA este bloque y
+     pégalo ANTES del volumen anterior, separado por coma:
+     {
+       numero:   "Vol. 02",
+       fecha:    "Semana del DD de Mes de AAAA",
+       intro:    "Frase de apertura de la semana.",
+       noticias: [
+         { titulo: "...", fuente: "Fuente · Fecha", desc: "..." },
+         { titulo: "...", fuente: "Fuente · Fecha", desc: "..." },
+         { titulo: "...", fuente: "Fuente · Fecha", desc: "..." }
+       ],
+       pelicula: { titulo: "...", año: "AAAA", nota: "..." }
+     }
+     ───────────────────────────────────────────────────── */
+  semanas: [
+    /* ── VOL. 00 — Plantilla inicial (no borrar) ── */
+    {
+      numero:   "Vol. 00",
+      fecha:    "Semana de ejemplo · 2026",
+      intro:    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      noticias: [
+        {
+          titulo: "Lorem ipsum noticia uno",
+          fuente: "Fuente · Fecha",
+          desc:   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+        },
+        {
+          titulo: "Lorem ipsum noticia dos",
+          fuente: "Fuente · Fecha",
+          desc:   "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+          titulo: "Lorem ipsum noticia tres",
+          fuente: "Fuente · Fecha",
+          desc:   "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+      ],
+      pelicula: {
+        titulo: "Lorem Ipsum: La Película",
+        año:    "0000",
+        nota:   "Lorem ipsum dolor sit amet — consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      }
+    }
+  ]
+
+}; /* ← fin de la zona editable */
 
 
-    /* ═══════════════════════════════════════════════════════
-       🎨  MOTOR DE RENDER — no tocar
-       ═══════════════════════════════════════════════════════ */
-    document.addEventListener('DOMContentLoaded', () => {
+/* ═══════════════════════════════════════════════════════
+   🎨  MOTOR DE RENDER — no tocar
+   ═══════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
 
-      const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      const safe = s => String(s);
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const safe = s => String(s);
 
-      document.title = `${ISAY.nombre} — ${ISAY.tagline}`;
+  /* ── meta ── */
+  document.title = `${ISAY.nombre} — ${ISAY.tagline}`;
 
-      const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-      const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-      const now = new Date();
-      document.getElementById('mast-date').textContent =
-        `${days[now.getDay()]}, ${now.getDate()} de ${months[now.getMonth()]} de ${now.getFullYear()}`;
+  /* ── masthead date ── */
+  const days = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const now = new Date();
+  document.getElementById('mast-date').textContent =
+    `${days[now.getDay()]}, ${now.getDate()} de ${months[now.getMonth()]} de ${now.getFullYear()}`;
 
-      document.getElementById('profile-img').src = ISAY.foto;
-      document.getElementById('profile-img').alt = ISAY.nombre_completo;
-      document.getElementById('hero-nombre').textContent = ISAY.nombre;
-      document.getElementById('hero-headline').textContent = ISAY.headline;
-      document.getElementById('hero-tagline').textContent = ISAY.tagline;
-      document.getElementById('hero-bio').textContent = ISAY.bio;
-      document.getElementById('hero-ubicacion').textContent = ISAY.ubicacion;
+  /* ── profile ── */
+  document.getElementById('profile-img').src = ISAY.foto;
+  document.getElementById('profile-img').alt = ISAY.nombre_completo;
+  document.getElementById('hero-nombre').textContent  = ISAY.nombre;
+  document.getElementById('hero-headline').textContent = ISAY.headline;
+  document.getElementById('hero-tagline').textContent  = ISAY.tagline;
+  document.getElementById('hero-bio').textContent      = ISAY.bio;
+  document.getElementById('hero-ubicacion').textContent = ISAY.ubicacion;
 
-      const socLinks = {
-        'soc-ig': `https://www.instagram.com/${ISAY.instagram}/`,
-        'soc-x': `https://x.com/${ISAY.twitter}`,
-        'soc-li': `https://www.linkedin.com/in/${ISAY.linkedin}`,
-        'soc-mail': `mailto:${ISAY.email}`,
-        'nav-ig': `https://www.instagram.com/${ISAY.instagram}/`,
-        'nav-x': `https://x.com/${ISAY.twitter}`,
-        'nav-li': `https://www.linkedin.com/in/${ISAY.linkedin}`
-      };
-      Object.entries(socLinks).forEach(([id, href]) => {
-        const el = document.getElementById(id);
-        if (el) el.href = href;
-      });
-      document.getElementById('soc-ig-label').textContent = `@${ISAY.instagram}`;
-      document.getElementById('soc-x-label').textContent = `@${ISAY.twitter}`;
-      document.getElementById('footer-ig').textContent = `@${ISAY.instagram}`;
-      document.getElementById('footer-x').textContent = `@${ISAY.twitter}`;
-      document.getElementById('footer-nombre').textContent = ISAY.nombre_completo;
-      document.getElementById('footer-tagline').textContent = ISAY.tagline;
-      document.getElementById('footer-email').href = `mailto:${ISAY.email}`;
-      document.getElementById('footer-email').textContent = ISAY.email;
+  /* ── social links ── */
+  const socLinks = {
+    'soc-ig':  `https://www.instagram.com/${ISAY.instagram}/`,
+    'soc-x':   `https://x.com/${ISAY.twitter}`,
+    'soc-li':  `https://www.linkedin.com/in/${ISAY.linkedin}`,
+    'soc-mail':`mailto:${ISAY.email}`,
+    'nav-ig':  `https://www.instagram.com/${ISAY.instagram}/`,
+    'nav-x':   `https://x.com/${ISAY.twitter}`,
+    'nav-li':  `https://www.linkedin.com/in/${ISAY.linkedin}`
+  };
+  Object.entries(socLinks).forEach(([id,href]) => {
+    const el = document.getElementById(id);
+    if(el) el.href = href;
+  });
+  document.getElementById('soc-ig-label').textContent  = `@${ISAY.instagram}`;
+  document.getElementById('soc-x-label').textContent   = `@${ISAY.twitter}`;
+  document.getElementById('footer-ig').textContent     = `@${ISAY.instagram}`;
+  document.getElementById('footer-x').textContent      = `@${ISAY.twitter}`;
+  document.getElementById('footer-nombre').textContent = ISAY.nombre_completo;
+  document.getElementById('footer-tagline').textContent = ISAY.tagline;
+  document.getElementById('footer-email').href         = `mailto:${ISAY.email}`;
+  document.getElementById('footer-email').textContent  = ISAY.email;
 
-      document.getElementById('ahora-list').innerHTML = ISAY.ahora.map(a =>
-        `<div class="ahora-item"><span class="ahora-icono">${a.icono}</span><span>${esc(a.texto)}</span></div>`
-      ).join('');
+  /* ── ahora ── */
+  document.getElementById('ahora-list').innerHTML = ISAY.ahora.map(a =>
+    `<div class="ahora-item"><span class="ahora-icono">${a.icono}</span><span>${esc(a.texto)}</span></div>`
+  ).join('');
 
-      document.getElementById('skills-list').innerHTML = ISAY.skills.map(s =>
-        `<span class="skill-tag">${esc(s)}</span>`
-      ).join('');
+  /* ── skills ── */
+  document.getElementById('skills-list').innerHTML = ISAY.skills.map(s =>
+    `<span class="skill-tag">${esc(s)}</span>`
+  ).join('');
 
-      /* eventos destacados */
-      const destContainer = document.getElementById('eventos-destacados');
-      ISAY.eventos.filter(e => e.destacado).forEach(ev => {
-        const statsHTML = ev.stats.length ? `<div class="ev-stats">${ev.stats.map(s => `<div class="ev-stat"><span class="ev-stat-num">${esc(s.num)}</span><span class="ev-stat-label">${esc(s.label)}</span></div>`).join('')}</div>` : '';
-        const rolesHTML = ev.roles.map(r => `<span class="role-chip">${esc(r)}</span>`).join('');
-        const linkHTML = ev.link ? `<a href="${esc(ev.link)}" class="ev-cta"><i class="fas fa-arrow-right"></i> ${esc(ev.link_texto || 'Ver más')}</a>` : '';
-        destContainer.innerHTML += `
+  /* ── eventos destacados ── */
+  const destContainer = document.getElementById('eventos-destacados');
+  ISAY.eventos.filter(e=>e.destacado).forEach(ev => {
+    const statsHTML = ev.stats.length ? `<div class="ev-stats">${ev.stats.map(s=>`<div class="ev-stat"><span class="ev-stat-num">${esc(s.num)}</span><span class="ev-stat-label">${esc(s.label)}</span></div>`).join('')}</div>` : '';
+    const rolesHTML = ev.roles.map(r=>`<span class="role-chip">${esc(r)}</span>`).join('');
+    const linkHTML  = ev.link ? `<a href="${esc(ev.link)}" class="ev-cta"><i class="fas fa-arrow-right"></i> ${esc(ev.link_texto||'Ver más')}</a>` : '';
+    destContainer.innerHTML += `
       <article class="ev-featured reveal">
         <div class="ev-featured-label"><i class="fas fa-star"></i> Evento destacado</div>
         <div class="ev-featured-inner">
@@ -292,13 +336,13 @@ La tecnología me interesa como medio, no como fin.Quiero que la gente brille m�
           </div>
         </div>
       </article>`;
-      });
+  });
 
-      /* eventos normales */
-      const gridContainer = document.getElementById('eventos-grid');
-      ISAY.eventos.filter(e => !e.destacado).forEach(ev => {
-        const linkHTML = ev.link ? `<a href="${esc(ev.link)}" class="card-link" target="${ev.link.startsWith('http') ? '_blank' : '_self'}"><i class="fas fa-external-link-alt"></i> ${esc(ev.link_texto)}</a>` : '';
-        gridContainer.innerHTML += `
+  /* ── eventos normales ── */
+  const gridContainer = document.getElementById('eventos-grid');
+  ISAY.eventos.filter(e=>!e.destacado).forEach(ev => {
+    const linkHTML = ev.link ? `<a href="${esc(ev.link)}" class="card-link" target="${ev.link.startsWith('http')?'_blank':'_self'}"><i class="fas fa-external-link-alt"></i> ${esc(ev.link_texto)}</a>` : '';
+    gridContainer.innerHTML += `
       <article class="content-card reveal">
         <div class="card-icon">${ev.icono}</div>
         <div class="card-chip">${esc(ev.tipo)}</div>
@@ -307,14 +351,14 @@ La tecnología me interesa como medio, no como fin.Quiero que la gente brille m�
         <p class="card-desc">${safe(ev.descripcion)}</p>
         ${linkHTML}
       </article>`;
-      });
+  });
 
-      /* proyectos */
-      const projContainer = document.getElementById('proyectos-grid');
-      ISAY.proyectos.forEach(p => {
-        const tagsHTML = p.tags.map(t => `<span class="mini-tag">${esc(t)}</span>`).join('');
-        const linkHTML = p.link ? `<a href="${esc(p.link)}" class="card-link"><i class="fas fa-arrow-right"></i> Ver proyecto</a>` : '';
-        projContainer.innerHTML += `
+  /* ── proyectos ── */
+  const projContainer = document.getElementById('proyectos-grid');
+  ISAY.proyectos.forEach(p => {
+    const tagsHTML = p.tags.map(t=>`<span class="mini-tag">${esc(t)}</span>`).join('');
+    const linkHTML = p.link ? `<a href="${esc(p.link)}" class="card-link"><i class="fas fa-arrow-right"></i> Ver proyecto</a>` : '';
+    projContainer.innerHTML += `
       <article class="content-card reveal">
         <div class="card-icon">${p.icono}</div>
         <div class="card-chip">proyecto</div>
@@ -324,10 +368,10 @@ La tecnología me interesa como medio, no como fin.Quiero que la gente brille m�
         <div class="mini-tags">${tagsHTML}</div>
         ${linkHTML}
       </article>`;
-      });
+  });
 
-      /* trayectoria */
-      document.getElementById('trayectoria-list').innerHTML = ISAY.trayectoria.map(t => `
+  /* ── trayectoria ── */
+  document.getElementById('trayectoria-list').innerHTML = ISAY.trayectoria.map(t => `
     <div class="tl-item reveal">
       <div class="tl-icono">${t.icono}</div>
       <div class="tl-content">
@@ -337,1215 +381,771 @@ La tecnología me interesa como medio, no como fin.Quiero que la gente brille m�
       </div>
     </div>`).join('');
 
-      /* esta semana con navegación */
-      if (ISAY.semanas && ISAY.semanas.length > 0) {
-        const all = ISAY.semanas;
-        let idx = 0;
+  /* ── esta semana (con navegación de volúmenes) ── */
+  if (ISAY.semanas && ISAY.semanas.length > 0) {
+    const all = ISAY.semanas;   // índice 0 = más reciente
+    let idx = 0;                // empezamos en el más reciente
 
-        function renderSemana(i) {
-          const s = all[i];
-          document.getElementById('semana-vol').textContent = s.numero;
-          document.getElementById('semana-fecha').textContent = s.fecha;
-          document.getElementById('semana-intro').textContent = s.intro;
-          document.getElementById('semana-counter').textContent = `${all.length - i} / ${all.length}`;
+    function renderSemana(i) {
+      const s = all[i];
+      document.getElementById('semana-vol').textContent     = s.numero;
+      document.getElementById('semana-fecha').textContent   = s.fecha;
+      document.getElementById('semana-intro').textContent   = s.intro;
+      document.getElementById('semana-counter').textContent =
+        `${all.length - i} / ${all.length}`;
 
-          document.getElementById('semana-noticias').innerHTML = s.noticias.map(n => `
+      document.getElementById('semana-noticias').innerHTML = s.noticias.map(n => `
         <div class="noticia-card">
           <div class="noticia-titulo">${esc(n.titulo)}</div>
           <div class="noticia-fuente">${esc(n.fuente)}</div>
           <p class="noticia-desc">${esc(n.desc)}</p>
         </div>`).join('');
 
-          document.getElementById('semana-peli').innerHTML = s.pelicula ? `
+      document.getElementById('semana-peli').innerHTML = s.pelicula ? `
         <div class="peli-eyebrow">🎬 Película de la semana</div>
         <div class="peli-titulo">${esc(s.pelicula.titulo)}</div>
         <div class="peli-año">${esc(s.pelicula.año)}</div>
         <p class="peli-nota">${esc(s.pelicula.nota)}</p>` : '';
 
-          document.getElementById('semana-prev').disabled = (i >= all.length - 1);
-          document.getElementById('semana-next').disabled = (i <= 0);
-        }
+      // estado de los botones
+      document.getElementById('semana-prev').disabled = (i >= all.length - 1);
+      document.getElementById('semana-next').disabled = (i <= 0);
+    }
 
-        renderSemana(0);
+    renderSemana(0);
 
-        document.getElementById('semana-prev').addEventListener('click', () => {
-          if (idx < all.length - 1) { idx++; renderSemana(idx); }
-        });
-        document.getElementById('semana-next').addEventListener('click', () => {
-          if (idx > 0) { idx--; renderSemana(idx); }
-        });
-      }
-
-      /* reveal on scroll */
-      const obs = new IntersectionObserver(
-        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-        { threshold: 0.08 }
-      );
-      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-      /* mobile nav */
-      document.getElementById('nav-toggle').addEventListener('click', () => {
-        document.getElementById('nav-menu').classList.toggle('open');
-      });
-      document.querySelectorAll('#nav-menu a').forEach(a => a.addEventListener('click', () => {
-        document.getElementById('nav-menu').classList.remove('open');
-      }));
+    document.getElementById('semana-prev').addEventListener('click', () => {
+      if (idx < all.length - 1) { idx++; renderSemana(idx); }
     });
-  </script>
-
-  <style>
-    :root {
-      --ink: #0e0d0b;
-      --paper: #f5f0e8;
-      --paper2: #ede8de;
-      --paper3: #e4ddd0;
-      --gold: #b8860b;
-      --gold-lt: #d4a843;
-      --muted: #7a7060;
-      --teal: #1a7a68;
-      --red: #8b1a1a;
-      --border: rgba(14, 13, 11, 0.12);
-      --border-strong: rgba(14, 13, 11, 0.25);
-      --shadow: 0 2px 16px rgba(14, 13, 11, 0.08);
-      --r: 8px;
-    }
-
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.025;
-      background-size: 180px;
-    }
-
-    * {
-      position: relative;
-      z-index: 1;
-    }
-
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--paper2);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--gold);
-      border-radius: 3px;
-    }
-
-    /* ── NAV ── */
-    .nav-wrap {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(245, 240, 232, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-strong);
-    }
-
-    .nav-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 1.5rem;
-      height: 56px;
-    }
-
-    .nav-brand {
-      font-family: 'Playfair Display', serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
-
-    .nav-brand span {
-      color: var(--gold);
-    }
-
-    .nav-links-wrap {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    #nav-menu {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-
-    #nav-menu a {
-      font-size: .78rem;
-      font-weight: 600;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      transition: color .2s;
-    }
-
-    #nav-menu a:hover {
-      color: var(--gold);
-    }
-
-    .nav-socials {
-      display: flex;
-      gap: .5rem;
-    }
-
-    .nav-socials a {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .8rem;
-      text-decoration: none;
-      color: var(--muted);
-      border: 1px solid var(--border-strong);
-      transition: all .2s;
-    }
-
-    .nav-socials a:hover {
-      background: var(--ink);
-      color: var(--paper);
-      border-color: var(--ink);
-    }
-
-    #nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.1rem;
-      color: var(--ink);
-      cursor: pointer;
-    }
-
-    /* ── MASTHEAD ── */
-    .masthead {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 5rem 1.5rem 0;
-      text-align: center;
-    }
-
-    .mast-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 3px solid var(--ink);
-      border-bottom: 1px solid var(--ink);
-      padding: .4rem 0;
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: .75rem;
-    }
-
-    .mast-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(4rem, 12vw, 9rem);
-      font-weight: 900;
-      line-height: .95;
-      letter-spacing: -3px;
-      color: var(--ink);
-      margin-bottom: .4rem;
-    }
-
-    .mast-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(.95rem, 2.5vw, 1.25rem);
-      font-style: italic;
-      color: var(--muted);
-      margin-bottom: .3rem;
-    }
-
-    .mast-tagline {
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .mast-rule {
-      border: none;
-      border-top: 3px double var(--ink);
-      margin: 1rem 0 0;
-    }
-
-    /* ── HERO 3-COL ── */
-    .hero-grid {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 280px 1fr 240px;
-      gap: 0;
-      border-bottom: 2px solid var(--ink);
-    }
-
-    .hero-col {
-      padding: 1.5rem;
-    }
-
-    .hero-col:not(:last-child) {
-      border-right: 1px solid var(--border-strong);
-    }
-
-    .profile-photo-wrap {
-      width: 100%;
-      aspect-ratio: 3/4;
-      overflow: hidden;
-      border: 1px solid var(--border-strong);
-      margin-bottom: 1rem;
-      background: var(--paper3);
-      position: relative;
-    }
-
-    .profile-photo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .photo-caption {
-      font-size: .7rem;
-      color: var(--muted);
-      font-style: italic;
-      text-align: center;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: .75rem;
-    }
-
-    .profile-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: .25rem;
-    }
-
-    .profile-loc {
-      font-size: .75rem;
-      color: var(--muted);
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-
-    .profile-bio {
-      font-size: .85rem;
-      color: var(--muted);
-      line-height: 1.65;
-      margin-bottom: 1rem;
-    }
-
-    .social-stack {
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
-    }
-
-    .soc-item {
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      padding: .45rem .75rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: .8rem;
-      font-weight: 600;
-      border: 1px solid var(--border-strong);
-      color: var(--ink);
-      transition: all .2s;
-    }
-
-    .soc-item:hover {
-      border-color: var(--ink);
-      background: var(--paper3);
-    }
-
-    .soc-label {
-      font-size: .75rem;
-    }
-
-    .hero-center-title {
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: .75rem;
-    }
-
-    .skills-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .4rem;
-    }
-
-    .skill-tag {
-      background: var(--paper3);
-      border: 1px solid var(--border-strong);
-      border-radius: 4px;
-      padding: 4px 10px;
-      font-size: .75rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-
-    .ahora-header {
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .ahora-item {
-      display: flex;
-      gap: .6rem;
-      align-items: flex-start;
-      margin-bottom: .75rem;
-      font-size: .85rem;
-      color: var(--ink);
-    }
-
-    .ahora-icono {
-      font-size: 1rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .full-rule {
-      border: none;
-      border-top: 2px solid var(--ink);
-      margin: 0;
-    }
-
-    /* ── ESTA SEMANA ── */
-    .semana-section {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem;
-    }
-
-    .semana-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      border-top: 3px solid var(--ink);
-      border-bottom: 1px solid var(--border);
-      padding: .4rem 0;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .semana-label {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--ink);
-    }
-
-    .semana-vol {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .72rem;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .semana-fecha {
-      font-size: .72rem;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .semana-nav {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-    }
-
-    .semana-counter {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .72rem;
-      color: var(--muted);
-      font-weight: 600;
-      min-width: 36px;
-      text-align: center;
-    }
-
-    .semana-btn {
-      width: 30px;
-      height: 30px;
-      border-radius: 4px;
-      border: 1px solid var(--border-strong);
-      background: var(--paper2);
-      color: var(--ink);
-      font-size: .85rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all .18s;
-    }
-
-    .semana-btn:hover:not(:disabled) {
-      background: var(--ink);
-      color: var(--paper);
-      border-color: var(--ink);
-    }
-
-    .semana-btn:disabled {
-      opacity: .3;
-      cursor: default;
-    }
-
-    .semana-intro {
-      font-size: .88rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 1.75rem;
-      max-width: 680px;
-    }
-
-    .semana-grid {
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 1.5rem;
-    }
-
-    .noticias-col {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .noticia-card {
-      background: var(--paper2);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--gold);
-      border-radius: var(--r);
-      padding: 1rem 1.1rem;
-      transition: transform .2s;
-    }
-
-    .noticia-card:hover {
-      transform: translateX(3px);
-    }
-
-    .noticia-titulo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: .25rem;
-    }
-
-    .noticia-fuente {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .68rem;
-      color: var(--gold);
-      font-weight: 600;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      margin-bottom: .5rem;
-    }
-
-    .noticia-desc {
-      font-size: .85rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    .peli-card {
-      background: var(--ink);
-      color: var(--paper);
-      border-radius: var(--r);
-      padding: 1.25rem 1.1rem;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
-    }
-
-    .peli-eyebrow {
-      font-size: .65rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-lt);
-    }
-
-    .peli-titulo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.2;
-    }
-
-    .peli-año {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .78rem;
-      color: var(--gold-lt);
-    }
-
-    .peli-nota {
-      font-size: .82rem;
-      color: rgba(245, 240, 232, .7);
-      line-height: 1.6;
-      margin-top: .25rem;
-    }
-
-    /* ── SECTIONS ── */
-    .page-section {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: .75rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-label {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 800;
-    }
-
-    .section-sub {
-      font-size: .75rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* eventos destacados */
-    .ev-featured {
-      background: var(--paper2);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--gold);
-      border-radius: var(--r);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .ev-featured-label {
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-
-    .ev-featured-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1.5rem;
-      align-items: start;
-    }
-
-    .ev-featured-content {}
-
-    .ev-roles {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .35rem;
-      margin-bottom: .75rem;
-    }
-
-    .role-chip {
-      background: var(--ink);
-      color: var(--paper);
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: .5px;
-      padding: 3px 10px;
-      border-radius: 3px;
-    }
-
-    .ev-featured-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: .5rem;
-    }
-
-    .ev-meta {
-      font-size: .78rem;
-      color: var(--muted);
-      margin-bottom: .75rem;
-    }
-
-    .ev-desc {
-      font-size: .9rem;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .ev-stats {
-      display: flex;
-      gap: 1.25rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-
-    .ev-stat {
-      text-align: center;
-    }
-
-    .ev-stat-num {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: var(--ink);
-      line-height: 1;
-    }
-
-    .ev-stat-label {
-      font-size: .65rem;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: .5px;
-      text-transform: uppercase;
-    }
-
-    .ev-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--ink);
-      color: var(--paper);
-      font-size: .82rem;
-      font-weight: 700;
-      padding: .5rem 1rem;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: opacity .2s;
-    }
-
-    .ev-cta:hover {
-      opacity: .85;
-    }
-
-    .ev-featured-badge {
-      display: flex;
-      flex-direction: column;
-      gap: .75rem;
-      align-items: center;
-    }
-
-    .badge-nvidia {
-      background: #76b900;
-      color: var(--ink);
-      text-align: center;
-      padding: .75rem 1rem;
-      border-radius: var(--r);
-      font-weight: 900;
-      font-size: .85rem;
-      line-height: 1.2;
-    }
-
-    .badge-nvidia span {
-      font-size: 1.1rem;
-    }
-
-    .badge-cert {
-      background: var(--gold);
-      color: var(--ink);
-      text-align: center;
-      padding: .75rem 1rem;
-      border-radius: var(--r);
-      font-size: .78rem;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    /* cards grid */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1rem;
-    }
-
-    .content-card {
-      background: var(--paper2);
-      border: 1px solid var(--border);
-      border-top: 2px solid var(--ink);
-      border-radius: var(--r);
-      padding: 1.1rem;
-      display: flex;
-      flex-direction: column;
-      gap: .4rem;
-    }
-
-    .card-icon {
-      font-size: 1.4rem;
-    }
-
-    .card-chip {
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 800;
-      line-height: 1.25;
-    }
-
-    .card-meta {
-      font-size: .72rem;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .card-desc {
-      font-size: .83rem;
-      color: var(--muted);
-      line-height: 1.65;
-      flex: 1;
-    }
-
-    .card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      margin-top: auto;
-      font-size: .78rem;
-      font-weight: 700;
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-    .card-link:hover {
-      color: var(--ink);
-    }
-
-    .mini-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .3rem;
-    }
-
-    .mini-tag {
-      background: var(--paper3);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      padding: 2px 7px;
-      font-size: .68rem;
-      font-weight: 600;
-      color: var(--muted);
-    }
-
-    /* trayectoria */
-    #trayectoria-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: .75rem;
-    }
-
-    .tl-item {
-      display: flex;
-      gap: .75rem;
-      align-items: flex-start;
-      padding: .85rem;
-      background: var(--paper2);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      transition: transform .2s;
-    }
-
-    .tl-item:hover {
-      transform: translateY(-2px);
-    }
-
-    .tl-icono {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .tl-fecha {
-      font-size: .68rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      margin-bottom: .15rem;
-    }
-
-    .tl-titulo {
-      font-size: .88rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: .1rem;
-    }
-
-    .tl-org {
-      font-size: .75rem;
-      color: var(--muted);
-    }
-
-    /* footer */
-    footer {
-      background: var(--ink);
-      color: var(--paper);
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      border-top: 3px solid var(--gold);
-    }
-
-    .footer-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-    }
-
-    .footer-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
-      font-weight: 900;
-      margin-bottom: .25rem;
-    }
-
-    .footer-tagline {
-      color: var(--gold);
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-socials {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.25rem;
-    }
-
-    .footer-soc {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      padding: .5rem 1rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: .82rem;
-      font-weight: 600;
-      border: 1px solid rgba(245, 240, 232, .2);
-      color: var(--paper);
-      transition: all .2s;
-    }
-
-    .footer-soc:hover {
-      background: rgba(245, 240, 232, .1);
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .footer-copy {
-      font-size: .72rem;
-      color: rgba(245, 240, 232, .4);
-      margin-top: .5rem;
-    }
-
-    footer a {
-      color: var(--gold-lt);
-      text-decoration: none;
-    }
-
-    /* reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .5s ease, transform .5s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-col:not(:last-child) {
-        border-right: none;
-        border-bottom: 1px solid var(--border-strong);
-      }
-
-      .ev-featured-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .ev-featured-badge {
-        flex-direction: row;
-      }
-
-      .semana-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      #nav-menu {
-        display: none;
-        flex-direction: column;
-      }
-
-      #nav-menu.open {
-        display: flex;
-        position: absolute;
-        top: 56px;
-        left: 0;
-        right: 0;
-        background: var(--paper);
-        padding: 1rem 1.5rem;
-        border-bottom: 2px solid var(--ink);
-        gap: .75rem;
-        z-index: 200;
-      }
-
-      #nav-toggle {
-        display: block;
-      }
-
-      .nav-socials {
-        display: none;
-      }
-
-      .mast-title {
-        letter-spacing: -2px;
-      }
-
-      .mast-top span:nth-child(2) {
-        display: none;
-      }
-
-      /* FOTO DISCRETA EN MÓVIL */
-      .profile-photo-wrap {
-        width: 110px;
-        height: 110px;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-      }
-
-      .profile-photo-wrap img {
-        object-position: center center;
-      }
-
-      .photo-caption {
-        text-align: center;
-      }
-    }
-  </style>
-
-  <!-- HTML -->
-
-  <div class="nav-wrap">
-    <div class="nav-inner">
-      <a href="#" class="nav-brand">Isay<span>.</span></a>
-      <div class="nav-links-wrap">
-        <ul id="nav-menu">
-          <li><a href="#semana">Esta Semana</a></li>
-          <li><a href="#eventos">Eventos</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#trayectoria">Trayectoria</a></li>
-          <li><a href="taller-excel/index.html">Taller Excel</a></li>
-          <li><a href="nvidia-dli/index.html">NVIDIA DLI</a></li>
-          <li><a href="oracle-apex/index.html">Oracle APEX</a></li>
-        </ul>
-        <div class="nav-socials">
-          <a id="nav-ig" href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a id="nav-x" href="#" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
-          <a id="nav-li" href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <button id="nav-toggle"><i class="fas fa-bars"></i></button>
+    document.getElementById('semana-next').addEventListener('click', () => {
+      if (idx > 0) { idx--; renderSemana(idx); }
+    });
+  }
+
+  /* ── reveal on scroll ── */
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }),
+    {threshold: 0.08}
+  );
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  /* ── mobile nav ── */
+  document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('#nav-menu a').forEach(a => a.addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.remove('open');
+  }));
+});
+</script>
+
+<style>
+/* ──────────────────────────────────────
+   VARIABLES Y RESET
+────────────────────────────────────── */
+:root {
+  --ink:     #0e0d0b;
+  --paper:   #f5f0e8;
+  --paper2:  #ede8de;
+  --paper3:  #e4ddd0;
+  --gold:    #b8860b;
+  --gold-lt: #d4a843;
+  --muted:   #7a7060;
+  --teal:    #1a7a68;
+  --red:     #8b1a1a;
+  --border:  rgba(14,13,11,0.12);
+  --border-strong: rgba(14,13,11,0.25);
+  --shadow:  0 2px 16px rgba(14,13,11,0.08);
+  --r:       8px;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+
+/* Paper texture via CSS grain */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  background-size: 180px;
+}
+* { position: relative; z-index: 1; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--paper2); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ──────────────────────────────────────
+   NAV
+────────────────────────────────────── */
+.nav-wrap {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(245,240,232,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-strong);
+}
+.nav-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.5rem; height: 56px;
+}
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800; font-size: 1.3rem; color: var(--ink);
+  text-decoration: none; letter-spacing: -0.5px;
+}
+.nav-brand span { color: var(--gold); }
+.nav-links-wrap { display: flex; align-items: center; gap: 2rem; }
+#nav-menu { display: flex; gap: 2rem; list-style: none; }
+#nav-menu a {
+  font-size: .82rem; font-weight: 600; color: var(--muted);
+  text-decoration: none; letter-spacing: .5px; text-transform: uppercase;
+  transition: color .2s;
+}
+#nav-menu a:hover { color: var(--gold); }
+.nav-socials { display: flex; gap: .5rem; }
+.nav-socials a {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; text-decoration: none; color: var(--muted);
+  border: 1px solid var(--border-strong); transition: all .2s;
+}
+.nav-socials a:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+#nav-toggle {
+  display: none; background: none; border: none;
+  font-size: 1.1rem; color: var(--ink); cursor: pointer;
+}
+
+/* ──────────────────────────────────────
+   MASTHEAD
+────────────────────────────────────── */
+.masthead {
+  max-width: 1160px; margin: 0 auto;
+  padding: 5rem 1.5rem 0;
+  text-align: center;
+}
+.mast-top {
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: .4rem 0;
+  font-size: .72rem; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: .75rem;
+}
+.mast-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 900; line-height: .95;
+  letter-spacing: -3px;
+  color: var(--ink);
+  margin-bottom: .4rem;
+}
+.mast-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(.95rem, 2.5vw, 1.25rem);
+  font-style: italic; color: var(--muted);
+  margin-bottom: .3rem;
+}
+.mast-tagline {
+  font-size: .78rem; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+}
+.mast-rule {
+  border: none; border-top: 3px double var(--ink);
+  margin: 1rem 0 0;
+}
+
+/* ──────────────────────────────────────
+   HERO — 3 COLUMN NEWSPAPER LAYOUT
+────────────────────────────────────── */
+.hero-grid {
+  max-width: 1160px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr 240px;
+  gap: 0;
+  border-bottom: 2px solid var(--ink);
+}
+.hero-col {
+  padding: 1.5rem;
+}
+.hero-col:not(:last-child) {
+  border-right: 1px solid var(--border-strong);
+}
+
+/* Left col — profile */
+.profile-photo-wrap {
+  width: 100%; aspect-ratio: 3/4;
+  overflow: hidden; border: 1px solid var(--border-strong);
+  margin-bottom: 1rem; background: var(--paper3);
+  position: relative;
+}
+.profile-photo-wrap img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  display: block;
+}
+.photo-caption {
+  font-size: .7rem; color: var(--muted); font-style: italic;
+  text-align: center; margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border); padding-bottom: .75rem;
+}
+.profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; font-weight: 800; line-height: 1.1;
+  margin-bottom: .25rem;
+}
+.profile-loc {
+  font-size: .75rem; color: var(--muted); font-weight: 500;
+  letter-spacing: .5px; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 5px;
+}
+.profile-bio {
+  font-size: .85rem; color: #3a3530; line-height: 1.65;
+  border-top: 1px solid var(--border); padding-top: .75rem;
+}
+
+/* Social links */
+.social-stack { display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; }
+.soc-item {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .45rem .7rem; border-radius: var(--r);
+  text-decoration: none; font-size: .82rem; font-weight: 600;
+  transition: all .2s; border: 1px solid transparent;
+}
+.soc-item i { font-size: .9rem; width: 16px; text-align: center; }
+.soc-ig  { color: #c13584; background: rgba(193,53,132,.06); border-color: rgba(193,53,132,.2); }
+.soc-ig:hover  { background: rgba(193,53,132,.14); transform: translateX(3px); }
+.soc-x   { color: #0f1419; background: rgba(15,20,25,.05); border-color: rgba(15,20,25,.18); }
+.soc-x:hover   { background: rgba(15,20,25,.12); transform: translateX(3px); }
+.soc-li  { color: #0a66c2; background: rgba(10,102,194,.06); border-color: rgba(10,102,194,.2); }
+.soc-li:hover  { background: rgba(10,102,194,.14); transform: translateX(3px); }
+.soc-mail{ color: var(--teal); background: rgba(26,122,104,.06); border-color: rgba(26,122,104,.2); }
+.soc-mail:hover{ background: rgba(26,122,104,.14); transform: translateX(3px); }
+.soc-label { font-size: .78rem; }
+
+/* Center col — featured content */
+.hero-center-title {
+  font-size: .65rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--border); padding-bottom: .5rem;
+  margin-bottom: 1rem;
+}
+.skills-cloud { display: flex; flex-wrap: wrap; gap: .4rem; }
+.skill-tag {
+  font-size: .72rem; font-weight: 600; letter-spacing: .3px;
+  padding: 3px 10px; border-radius: 3px;
+  background: var(--ink); color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Right col — ahora */
+.ahora-header {
+  font-size: .65rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--red);
+  border-bottom: 2px solid var(--red); padding-bottom: .5rem;
+  margin-bottom: 1rem;
+}
+.ahora-item {
+  display: flex; align-items: flex-start; gap: .6rem;
+  padding: .6rem 0; border-bottom: 1px dashed var(--border);
+  font-size: .82rem; line-height: 1.4; color: #2a2520;
+}
+.ahora-item:last-child { border-bottom: none; }
+.ahora-icono { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+/* ──────────────────────────────────────
+   SECTION CHROME
+────────────────────────────────────── */
+.page-section { max-width: 1160px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.section-header {
+  display: flex; align-items: baseline; gap: 1rem;
+  border-bottom: 2px solid var(--ink); margin-bottom: 1.5rem; padding-bottom: .4rem;
+}
+.section-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 800;
+}
+.section-sub {
+  font-size: .72rem; color: var(--muted); font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  margin-left: auto;
+}
+.full-rule { border: none; border-top: 1px solid var(--border-strong); margin: 0; }
+
+/* ──────────────────────────────────────
+   EVENTO DESTACADO
+────────────────────────────────────── */
+.ev-featured {
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--gold);
+  background: var(--paper2);
+  border-radius: var(--r);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+.ev-featured-label {
+  font-size: .68rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1rem; display: flex; align-items: center; gap: 6px;
+}
+.ev-featured-inner {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 2rem; align-items: start;
+}
+.ev-roles { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .75rem; }
+.role-chip {
+  font-size: .7rem; font-weight: 700; letter-spacing: .5px;
+  padding: 2px 10px; border-radius: 3px;
+  background: var(--ink); color: var(--paper);
+  text-transform: uppercase;
+}
+.ev-featured-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 3vw, 1.75rem);
+  font-weight: 800; line-height: 1.2;
+  margin-bottom: .5rem;
+}
+.ev-meta {
+  font-size: .78rem; color: var(--muted); font-weight: 500;
+  margin-bottom: .75rem; display: flex; align-items: center; gap: 4px; flex-wrap: wrap;
+}
+.ev-desc { font-size: .9rem; color: #3a3530; line-height: 1.7; margin-bottom: 1.25rem; }
+.ev-stats { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.ev-stat { text-align: center; }
+.ev-stat-num {
+  display: block; font-family: 'Playfair Display', serif;
+  font-size: 1.75rem; font-weight: 900; color: var(--ink); line-height: 1;
+}
+.ev-stat-label {
+  display: block; font-size: .65rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 1px; margin-top: 2px;
+}
+.ev-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--ink); color: var(--paper);
+  padding: .6rem 1.25rem; border-radius: 4px;
+  font-size: .82rem; font-weight: 700; text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.ev-cta:hover { background: var(--gold); transform: translateY(-1px); }
+.ev-featured-badge {
+  display: flex; flex-direction: column; align-items: center; gap: .75rem;
+}
+.badge-nvidia {
+  background: #76B900; color: #000;
+  padding: .75rem 1.25rem; border-radius: 6px;
+  font-weight: 900; font-size: 1rem; text-align: center; line-height: 1.2;
+  letter-spacing: 1px;
+}
+.badge-nvidia span { font-size: .75rem; display: block; }
+.badge-cert {
+  background: var(--paper3); border: 1px solid var(--border-strong);
+  border-radius: 6px; padding: .5rem .75rem; text-align: center;
+  font-size: .7rem; line-height: 1.5;
+}
+
+/* ──────────────────────────────────────
+   CONTENT CARDS GRID
+────────────────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.content-card {
+  background: var(--paper2); border: 1px solid var(--border-strong);
+  border-radius: var(--r); padding: 1.25rem;
+  transition: transform .2s, box-shadow .2s;
+}
+.content-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.card-icon { font-size: 1.75rem; margin-bottom: .5rem; }
+.card-chip {
+  display: inline-block; font-size: .62rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  background: var(--ink); color: var(--paper);
+  padding: 2px 8px; border-radius: 2px; margin-bottom: .6rem;
+}
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; font-weight: 800; line-height: 1.3;
+  margin-bottom: .3rem;
+}
+.card-meta { font-size: .75rem; color: var(--muted); margin-bottom: .6rem; }
+.card-desc { font-size: .83rem; color: #3a3530; line-height: 1.6; margin-bottom: .75rem; }
+.card-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .78rem; font-weight: 700; color: var(--gold);
+  text-decoration: none; transition: color .2s;
+}
+.card-link:hover { color: var(--ink); }
+.mini-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .6rem; }
+.mini-tag {
+  font-size: .68rem; padding: 2px 8px; border-radius: 2px;
+  background: var(--paper3); border: 1px solid var(--border-strong);
+  color: var(--muted); font-family: 'JetBrains Mono', monospace;
+}
+
+/* ──────────────────────────────────────
+   TRAYECTORIA
+────────────────────────────────────── */
+.tl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: .75rem;
+}
+.tl-item {
+  display: flex; align-items: flex-start; gap: .75rem;
+  padding: .9rem 1rem;
+  background: var(--paper2); border: 1px solid var(--border);
+  border-radius: var(--r);
+  transition: transform .2s;
+}
+.tl-item:hover { transform: translateY(-2px); }
+.tl-icono { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+.tl-fecha { font-size: .68rem; font-weight: 700; color: var(--gold); letter-spacing: .5px; text-transform: uppercase; margin-bottom: .15rem; }
+.tl-titulo { font-size: .88rem; font-weight: 700; line-height: 1.3; margin-bottom: .1rem; }
+.tl-org { font-size: .75rem; color: var(--muted); }
+
+/* ──────────────────────────────────────
+   ESTA SEMANA
+────────────────────────────────────── */
+.semana-section {
+  max-width: 1160px; margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+.semana-header {
+  display: flex; align-items: center; gap: 1rem;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding: .4rem 0;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.semana-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 800; color: var(--ink);
+}
+.semana-vol {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem; font-weight: 600; color: var(--gold);
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.semana-fecha {
+  font-size: .72rem; color: var(--muted); font-weight: 500;
+  letter-spacing: .3px;
+}
+.semana-nav {
+  margin-left: auto;
+  display: flex; align-items: center; gap: .5rem;
+}
+.semana-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem; color: var(--muted); font-weight: 600;
+  min-width: 36px; text-align: center;
+}
+.semana-btn {
+  width: 30px; height: 30px; border-radius: 4px;
+  border: 1px solid var(--border-strong); background: var(--paper2);
+  color: var(--ink); font-size: .85rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .18s;
+}
+.semana-btn:hover:not(:disabled) { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.semana-btn:disabled { opacity: .3; cursor: default; }
+.semana-intro {
+  font-size: .88rem; color: var(--muted); font-style: italic;
+  margin-bottom: 1.75rem; max-width: 680px;
+}
+.semana-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1.5rem;
+}
+.noticias-col { display: flex; flex-direction: column; gap: 1rem; }
+.noticia-card {
+  background: var(--paper2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--r);
+  padding: 1rem 1.1rem;
+  transition: transform .2s;
+}
+.noticia-card:hover { transform: translateX(3px); }
+.noticia-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; font-weight: 700; color: var(--ink);
+  margin-bottom: .25rem;
+}
+.noticia-fuente {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem; color: var(--gold); font-weight: 600;
+  letter-spacing: .5px; text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.noticia-desc { font-size: .85rem; color: var(--muted); line-height: 1.65; }
+.peli-col {}
+.peli-card {
+  background: var(--ink); color: var(--paper);
+  border-radius: var(--r);
+  padding: 1.25rem 1.1rem;
+  height: 100%;
+  display: flex; flex-direction: column; gap: .5rem;
+}
+.peli-eyebrow {
+  font-size: .65rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold-lt);
+}
+.peli-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 800; color: #fff;
+  line-height: 1.2;
+}
+.peli-año {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .78rem; color: var(--gold-lt);
+}
+.peli-nota {
+  font-size: .82rem; color: rgba(245,240,232,.7);
+  line-height: 1.6; margin-top: .25rem;
+}
+@media (max-width: 640px) {
+  .semana-grid { grid-template-columns: 1fr; }
+}
+
+/* ──────────────────────────────────────
+   FOOTER
+────────────────────────────────────── */
+footer {
+  background: var(--ink); color: var(--paper);
+  padding: 2.5rem 1.5rem; text-align: center;
+  border-top: 3px solid var(--gold);
+}
+.footer-inner { max-width: 1160px; margin: 0 auto; }
+.footer-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem; font-weight: 900; margin-bottom: .25rem;
+}
+.footer-tagline { color: var(--gold); font-size: .8rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem; }
+.footer-socials { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.footer-soc {
+  display: flex; align-items: center; gap: 7px;
+  padding: .5rem 1rem; border-radius: 4px;
+  text-decoration: none; font-size: .82rem; font-weight: 600;
+  border: 1px solid rgba(245,240,232,.2); color: var(--paper);
+  transition: all .2s;
+}
+.footer-soc:hover { background: rgba(245,240,232,.1); border-color: var(--gold); color: var(--gold); }
+.footer-copy { font-size: .72rem; color: rgba(245,240,232,.4); margin-top: .5rem; }
+footer a { color: var(--gold-lt); text-decoration: none; }
+
+/* ──────────────────────────────────────
+   REVEAL ANIMATION
+────────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ──────────────────────────────────────
+   RESPONSIVE
+────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-col:not(:last-child) { border-right: none; border-bottom: 1px solid var(--border-strong); }
+  .profile-photo-wrap {
+    width: 120px; height: 120px;
+    aspect-ratio: 1/1; border-radius: 50%;
+    margin: 0 auto 1rem;
+  }
+  .profile-photo-wrap img { object-position: center center; }
+  .photo-caption { text-align: center; }
+  .ev-featured-inner { grid-template-columns: 1fr; }
+  .ev-featured-badge { flex-direction: row; }
+}
+@media (max-width: 640px) {
+  #nav-menu { display: none; flex-direction: column; }
+  #nav-menu.open {
+    display: flex; position: absolute; top: 56px; left: 0; right: 0;
+    background: var(--paper); padding: 1rem 1.5rem;
+    border-bottom: 2px solid var(--ink); gap: .75rem;
+  }
+  #nav-toggle { display: block; }
+  .mast-title { letter-spacing: -2px; }
+  .mast-top span:nth-child(2) { display: none; }
+}
+</style>
+
+<!-- ═══════════ HTML STRUCTURE ═══════════ -->
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Isay<span>.</span></a>
+    <div class="nav-links-wrap">
+      <ul id="nav-menu">
+        <li><a href="#semana">Esta Semana</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#trayectoria">Trayectoria</a></li>
+        <li><a href="taller-excel/index.html">Taller Excel</a></li>
+        <li><a href="nvidia-dli/index.html">NVIDIA DLI</a></li>
+        <li><a href="oracle-apex/index.html">Oracle APEX</a></li>
+      </ul>
+      <div class="nav-socials">
+        <a id="nav-ig" href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a id="nav-x"  href="#" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+        <a id="nav-li" href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
+      <button id="nav-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="mast-top">
+    <span>isay.github.io</span>
+    <span id="mast-date"></span>
+    <span>GDL · MX 🇲🇽</span>
+  </div>
+  <h1 class="mast-title" id="hero-nombre"></h1>
+  <p class="mast-headline" id="hero-headline"></p>
+  <p class="mast-tagline"  id="hero-tagline"></p>
+  <hr class="mast-rule"/>
+</div>
+
+<!-- HERO 3-COL -->
+<div class="hero-grid">
+
+  <!-- LEFT: Profile -->
+  <div class="hero-col">
+    <div class="profile-photo-wrap">
+      <img id="profile-img" src="" alt=""/>
+    </div>
+    <p class="photo-caption">Osaka, Japón · 2025</p>
+    <div class="profile-name" id="hero-nombre2">Isay</div>
+    <div class="profile-loc"><i class="fas fa-map-marker-alt"></i> <span id="hero-ubicacion"></span></div>
+    <p class="profile-bio" id="hero-bio"></p>
+    <div class="social-stack">
+      <a id="soc-ig"   href="#" target="_blank" class="soc-item soc-ig"><i class="fab fa-instagram"></i><span class="soc-label" id="soc-ig-label"></span></a>
+      <a id="soc-x"    href="#" target="_blank" class="soc-item soc-x"><i class="fab fa-x-twitter"></i><span class="soc-label" id="soc-x-label"></span></a>
+      <a id="soc-li"   href="#" target="_blank" class="soc-item soc-li"><i class="fab fa-linkedin"></i><span class="soc-label">LinkedIn</span></a>
+      <a id="soc-mail" href="#"                 class="soc-item soc-mail"><i class="fas fa-envelope"></i><span class="soc-label">Email</span></a>
     </div>
   </div>
 
-  <div class="masthead">
-    <div class="mast-top">
-      <span>isay.github.io</span>
-      <span id="mast-date"></span>
-      <span>GDL · MX 🇲🇽</span>
-    </div>
-    <h1 class="mast-title" id="hero-nombre"></h1>
-    <p class="mast-headline" id="hero-headline"></p>
-    <p class="mast-tagline" id="hero-tagline"></p>
-    <hr class="mast-rule" />
-  </div>
-
-  <div class="hero-grid">
-    <div class="hero-col">
-      <div class="profile-photo-wrap">
-        <img id="profile-img" src="" alt="" />
-      </div>
-      <p class="photo-caption">Osaka, Japón · 2025</p>
-      <div class="profile-name" id="hero-nombre2">Isay</div>
-      <div class="profile-loc"><i class="fas fa-map-marker-alt"></i> <span id="hero-ubicacion"></span></div>
-      <p class="profile-bio" id="hero-bio"></p>
-      <div class="social-stack">
-        <a id="soc-ig" href="#" target="_blank" class="soc-item"><i class="fab fa-instagram"></i><span class="soc-label"
-            id="soc-ig-label"></span></a>
-        <a id="soc-x" href="#" target="_blank" class="soc-item"><i class="fab fa-x-twitter"></i><span class="soc-label"
-            id="soc-x-label"></span></a>
-        <a id="soc-li" href="#" target="_blank" class="soc-item"><i class="fab fa-linkedin"></i><span
-            class="soc-label">LinkedIn</span></a>
-        <a id="soc-mail" href="#" class="soc-item"><i class="fas fa-envelope"></i><span
-            class="soc-label">Email</span></a>
-      </div>
-    </div>
-    <div class="hero-col">
-      <div class="hero-center-title">Stack tecnológico</div>
-      <div class="skills-cloud" id="skills-list"></div>
-      <div style="margin-top:1.5rem;border-top:1px dashed var(--border);padding-top:1rem;">
-        <div class="hero-center-title">Sobre mí</div>
-        <p style="font-size:.87rem;color:#3a3530;line-height:1.7" id="hero-bio2"></p>
-      </div>
-    </div>
-    <div class="hero-col">
-      <div class="ahora-header">● En este momento</div>
-      <div id="ahora-list"></div>
+  <!-- CENTER: Skills -->
+  <div class="hero-col">
+    <div class="hero-center-title">Stack tecnológico</div>
+    <div class="skills-cloud" id="skills-list"></div>
+    <div style="margin-top:1.5rem; border-top:1px dashed var(--border); padding-top:1rem;">
+      <div class="hero-center-title">Sobre mí</div>
+      <p style="font-size:.87rem;color:#3a3530;line-height:1.7" id="hero-bio2"></p>
     </div>
   </div>
 
-  <hr class="full-rule" />
+  <!-- RIGHT: Ahora -->
+  <div class="hero-col">
+    <div class="ahora-header">● En este momento</div>
+    <div id="ahora-list"></div>
+  </div>
 
-  <section id="semana">
-    <div class="semana-section">
-      <div class="semana-header">
-        <span class="semana-label">Esta Semana</span>
-        <span class="semana-vol" id="semana-vol"></span>
-        <span class="semana-fecha" id="semana-fecha"></span>
-        <div class="semana-nav">
-          <button class="semana-btn" id="semana-prev" title="Semana anterior">&#8592;</button>
-          <span class="semana-counter" id="semana-counter"></span>
-          <button class="semana-btn" id="semana-next" title="Semana siguiente">&#8594;</button>
-        </div>
+</div>
+
+<hr class="full-rule"/>
+
+<!-- ESTA SEMANA -->
+<section id="semana">
+  <div class="semana-section">
+    <div class="semana-header">
+      <span class="semana-label">Esta Semana</span>
+      <span class="semana-vol"   id="semana-vol"></span>
+      <span class="semana-fecha" id="semana-fecha"></span>
+      <div class="semana-nav">
+        <button class="semana-btn" id="semana-prev" title="Semana anterior">&#8592;</button>
+        <span   class="semana-counter" id="semana-counter"></span>
+        <button class="semana-btn" id="semana-next" title="Semana siguiente">&#8594;</button>
       </div>
-      <p class="semana-intro" id="semana-intro"></p>
-      <div class="semana-grid">
-        <div class="noticias-col" id="semana-noticias"></div>
-        <div class="peli-col">
-          <div class="peli-card" id="semana-peli"></div>
-        </div>
+    </div>
+    <p class="semana-intro" id="semana-intro"></p>
+    <div class="semana-grid">
+      <div class="noticias-col" id="semana-noticias"></div>
+      <div class="peli-col">
+        <div class="peli-card" id="semana-peli"></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <hr class="full-rule" />
+<hr class="full-rule"/>
 
-  <section class="page-section" id="eventos">
-    <div class="section-header">
-      <span class="section-label">Eventos & Actividades</span>
-      <span class="section-sub">Lo que organizo y en lo que participo</span>
+<!-- EVENTOS -->
+<section class="page-section" id="eventos">
+  <div class="section-header">
+    <span class="section-label">Eventos & Actividades</span>
+    <span class="section-sub">Lo que organizo y en lo que participo</span>
+  </div>
+  <div id="eventos-destacados"></div>
+  <div class="cards-grid" id="eventos-grid"></div>
+</section>
+
+<hr class="full-rule"/>
+
+<!-- PROYECTOS -->
+<section class="page-section" id="proyectos">
+  <div class="section-header">
+    <span class="section-label">Proyectos</span>
+    <span class="section-sub">Trabajo real, impacto real</span>
+  </div>
+  <div class="cards-grid" id="proyectos-grid"></div>
+</section>
+
+<hr class="full-rule"/>
+
+<!-- TRAYECTORIA -->
+<section class="page-section" id="trayectoria">
+  <div class="section-header">
+    <span class="section-label">Trayectoria</span>
+    <span class="section-sub">Académica y profesional</span>
+  </div>
+  <div class="tl-grid" id="trayectoria-list"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name" id="footer-nombre"></div>
+    <div class="footer-tagline" id="footer-tagline"></div>
+    <div class="footer-socials">
+      <a href="#" id="soc-ig2"   target="_blank" class="footer-soc"><i class="fab fa-instagram"></i> <span id="footer-ig"></span></a>
+      <a href="#" id="soc-x2"    target="_blank" class="footer-soc"><i class="fab fa-x-twitter"></i> <span id="footer-x"></span></a>
+      <a href="#" id="soc-li2"   target="_blank" class="footer-soc"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#" id="footer-email" class="footer-soc"><i class="fas fa-envelope"></i> <span></span></a>
     </div>
-    <div id="eventos-destacados"></div>
-    <div class="cards-grid" id="eventos-grid"></div>
-  </section>
+    <div class="footer-copy">© 2026 Miguel Isay Morales Cortes · Hecho con ☕ desde GDL 🇲🇽</div>
+  </div>
+</footer>
 
-  <hr class="full-rule" />
+<script>
+// Duplicate bio to center col
+document.addEventListener('DOMContentLoaded', () => {
+  const bio = document.getElementById('hero-bio');
+  const bio2 = document.getElementById('hero-bio2');
+  if(bio && bio2) bio2.textContent = bio.textContent;
 
-  <section class="page-section" id="proyectos">
-    <div class="section-header">
-      <span class="section-label">Proyectos</span>
-      <span class="section-sub">Trabajo real, impacto real</span>
-    </div>
-    <div class="cards-grid" id="proyectos-grid"></div>
-  </section>
-
-  <hr class="full-rule" />
-
-  <section class="page-section" id="trayectoria">
-    <div class="section-header">
-      <span class="section-label">Trayectoria</span>
-      <span class="section-sub">De dónde vengo y hacia dónde voy</span>
-    </div>
-    <div id="trayectoria-list"></div>
-  </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-name" id="footer-nombre"></div>
-      <div class="footer-tagline" id="footer-tagline"></div>
-      <div class="footer-socials">
-        <a id="nav-ig" href="#" target="_blank" class="footer-soc"><i class="fab fa-instagram"></i> <span
-            id="footer-ig"></span></a>
-        <a id="nav-x" href="#" target="_blank" class="footer-soc"><i class="fab fa-x-twitter"></i> <span
-            id="footer-x"></span></a>
-        <a id="footer-email" href="#" class="footer-soc"><i class="fas fa-envelope"></i> Email</a>
-      </div>
-      <div class="footer-copy">© 2026 · Hecho con intención · GDL 🇲🇽</div>
-    </div>
-  </footer>
+  // footer social links
+  document.getElementById('soc-ig2').href = document.getElementById('soc-ig').href;
+  document.getElementById('soc-x2').href  = document.getElementById('soc-x').href;
+  document.getElementById('soc-li2').href = document.getElementById('soc-li').href;
+});
+</script>
 
 </body>
-
 </html>

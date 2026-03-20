@@ -326,6 +326,23 @@
     .footer-sub { color: var(--oracle-lt); font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1rem; }
     .footer-back { color: rgba(245,240,232,.45); font-size: .8rem; }
     .footer-back a { color: var(--gold-lt); text-decoration: none; }
+  
+    /* ── NAV UNIFICADO ── */
+    .nav-links-wrap { display: flex; align-items: center; gap: 1.25rem; }
+    #nav-menu { display: flex; gap: 1.25rem; list-style: none; }
+    #nav-menu a { font-size: .75rem; font-weight: 600; color: var(--muted); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    #nav-menu a:hover { color: var(--gold); }
+    .nav-socials { display: flex; gap: .4rem; }
+    .nav-socials a { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .75rem; text-decoration: none; color: var(--muted); border: 1px solid var(--border-strong); transition: all .2s; }
+    .nav-socials a:hover { background: var(--ink); color: var(--paper); }
+    #nav-toggle { display: none; background: none; border: none; font-size: 1.1rem; color: var(--ink); cursor: pointer; }
+    @media (max-width: 640px) {
+      #nav-menu { display: none; flex-direction: column; }
+      #nav-menu.open { display: flex; position: absolute; top: 56px; left: 0; right: 0; background: var(--paper); padding: 1rem 1.5rem; border-bottom: 2px solid var(--ink); gap: .6rem; z-index: 200; }
+      #nav-toggle { display: block; }
+      .nav-socials { display: none; }
+    }
+
   </style>
 </head>
 <body>
@@ -343,11 +360,11 @@
         <li><a href="../oracle-apex/index.html">Oracle APEX</a></li>
       </ul>
       <div class="nav-socials">
-        <a id="nav-ig" href="https://www.instagram.com/miguel_isay/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a id="nav-x"  href="https://x.com/miguel_isay" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
-        <a id="nav-li" href="https://www.linkedin.com/in/miguel-morales7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/miguel_isay/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/miguel_isay" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/miguel-morales7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
-      <button id="nav-toggle"><i class="fas fa-bars"></i></button>
+      <button id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')"><i class="fas fa-bars"></i></button>
     </div>
   </div>
 </div>
@@ -681,17 +698,5 @@
   </div>
 </footer>
 
-<script>
-  /* ── mobile nav toggle ── */
-  const navToggle = document.getElementById('nav-toggle');
-  if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      document.getElementById('nav-menu').classList.toggle('open');
-    });
-    document.querySelectorAll('#nav-menu a').forEach(a => a.addEventListener('click', () => {
-      document.getElementById('nav-menu').classList.remove('open');
-    }));
-  }
-</script>
 </body>
 </html>
