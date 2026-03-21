@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./isay-shared.css" />
 </head>
 
 <body>
@@ -34,6 +35,7 @@
       instagram: "miguel_isay",
       twitter: "miguel_isay",
       linkedin: "miguel-morales7",
+      github: "I-say",
       email: "123miguelisay@gmail.com",
       ubicacion: "Guadalajara, Jalisco · México",
 
@@ -113,7 +115,7 @@
           titulo: "Consejero Universitario — CUGDL",
           fecha: "2025–hoy",
           lugar: "Centro Universitario de la Costa, UdeG",
-          descripcion: "Representante estudiantil electo ante el Consejo Universitario del CUGDL. Voz de la comunidad en decisiones académicas y de política institucional. En posicionamiento para la presidencia de carrera de IA y Ciencia de Datos.",
+          descripcion: "Representante estudiantil electo ante el Consejo Universitario del CUGDL. Trabajo para que la primera generación de IA y Ciencia de Datos tenga la voz, los recursos y las oportunidades que merece.",
           roles: ["Consejero Universitario", "Representante Estudiantil"],
           link: "",
           link_texto: "",
@@ -254,10 +256,15 @@
         'soc-ig': `https://www.instagram.com/${ISAY.instagram}/`,
         'soc-x': `https://x.com/${ISAY.twitter}`,
         'soc-li': `https://www.linkedin.com/in/${ISAY.linkedin}`,
+        'soc-gh': `https://github.com/${ISAY.github}`,
         'soc-mail': `mailto:${ISAY.email}`,
         'nav-ig': `https://www.instagram.com/${ISAY.instagram}/`,
         'nav-x': `https://x.com/${ISAY.twitter}`,
-        'nav-li': `https://www.linkedin.com/in/${ISAY.linkedin}`
+        'nav-li': `https://www.linkedin.com/in/${ISAY.linkedin}`,
+        'nav-gh': `https://github.com/${ISAY.github}`,
+        'footer-ig-link': `https://www.instagram.com/${ISAY.instagram}/`,
+        'footer-x-link': `https://x.com/${ISAY.twitter}`,
+        'footer-gh-link': `https://github.com/${ISAY.github}`
       };
       Object.entries(socLinks).forEach(([id, href]) => {
         const el = document.getElementById(id);
@@ -406,107 +413,7 @@
   </script>
 
   <style>
-    :root {
-      --ink: #0e0d0b;
-      --paper: #f5f0e8;
-      --paper2: #ede8de;
-      --paper3: #e4ddd0;
-      --gold: #b8860b;
-      --gold-lt: #d4a843;
-      --muted: #7a7060;
-      --teal: #1a7a68;
-      --red: #8b1a1a;
-      --border: rgba(14, 13, 11, 0.12);
-      --border-strong: rgba(14, 13, 11, 0.25);
-      --shadow: 0 2px 16px rgba(14, 13, 11, 0.08);
-      --r: 8px;
-    }
-
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.025;
-      background-size: 180px;
-    }
-
-    * {
-      position: relative;
-      z-index: 1;
-    }
-
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--paper2);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--gold);
-      border-radius: 3px;
-    }
-
-    /* ── NAV ── */
-    .nav-wrap {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(245, 240, 232, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-strong);
-    }
-
-    .nav-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 1.5rem;
-      height: 56px;
-    }
-
-    .nav-brand {
-      font-family: 'Playfair Display', serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
-
-    .nav-brand span {
-      color: var(--gold);
-    }
-
+    /* ── NAV COMPLETO (index.html) — base en isay-shared.css ── */
     .nav-links-wrap {
       display: flex;
       align-items: center;
@@ -531,31 +438,6 @@
 
     #nav-menu a:hover {
       color: var(--gold);
-    }
-
-    .nav-socials {
-      display: flex;
-      gap: .5rem;
-    }
-
-    .nav-socials a {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .8rem;
-      text-decoration: none;
-      color: var(--muted);
-      border: 1px solid var(--border-strong);
-      transition: all .2s;
-    }
-
-    .nav-socials a:hover {
-      background: var(--ink);
-      color: var(--paper);
-      border-color: var(--ink);
     }
 
     #nav-toggle {
@@ -592,7 +474,7 @@
 
     .mast-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(4rem, 12vw, 9rem);
+      font-size: clamp(3rem, 8vw, 6rem);
       font-weight: 900;
       line-height: .95;
       letter-spacing: -3px;
@@ -1381,7 +1263,7 @@
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       #nav-menu {
         display: none;
         flex-direction: column;
@@ -1389,10 +1271,11 @@
 
       #nav-menu.open {
         display: flex;
-        position: absolute;
+        position: fixed;
         top: 56px;
         left: 0;
         right: 0;
+        width: 100vw;
         background: var(--paper);
         padding: 1rem 1.5rem;
         border-bottom: 2px solid var(--ink);
@@ -1475,6 +1358,7 @@
           <a id="nav-ig" href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
           <a id="nav-x" href="#" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
           <a id="nav-li" href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a id="nav-gh" href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
         <button id="nav-toggle"><i class="fas fa-bars"></i></button>
       </div>
@@ -1508,6 +1392,8 @@
             id="soc-x-label"></span></a>
         <a id="soc-li" href="#" target="_blank" class="soc-item"><i class="fab fa-linkedin"></i><span
             class="soc-label">LinkedIn</span></a>
+        <a id="soc-gh" href="#" target="_blank" class="soc-item"><i class="fab fa-github"></i><span
+            class="soc-label">GitHub</span></a>
         <a id="soc-mail" href="#" class="soc-item"><i class="fas fa-envelope"></i><span
             class="soc-label">Email</span></a>
       </div>
@@ -1586,10 +1472,11 @@
       <div class="footer-name" id="footer-nombre"></div>
       <div class="footer-tagline" id="footer-tagline"></div>
       <div class="footer-socials">
-        <a id="nav-ig" href="#" target="_blank" class="footer-soc"><i class="fab fa-instagram"></i> <span
+        <a id="footer-ig-link" href="#" target="_blank" class="footer-soc"><i class="fab fa-instagram"></i> <span
             id="footer-ig"></span></a>
-        <a id="nav-x" href="#" target="_blank" class="footer-soc"><i class="fab fa-x-twitter"></i> <span
+        <a id="footer-x-link" href="#" target="_blank" class="footer-soc"><i class="fab fa-x-twitter"></i> <span
             id="footer-x"></span></a>
+        <a id="footer-gh-link" href="#" target="_blank" class="footer-soc"><i class="fab fa-github"></i> GitHub</a>
         <a id="footer-email" href="#" class="footer-soc"><i class="fas fa-envelope"></i> Email</a>
       </div>
       <div class="footer-copy">© 2026 · Hecho con intención · GDL 🇲🇽</div>
