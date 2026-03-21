@@ -7,30 +7,12 @@
   <meta name="description" content="250 lugares disponibles. Certifícate en Deep Learning con NVIDIA sin importar tu carrera. Sin experiencia previa en IA requerida." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../isay-shared.css" />
   <style>
+    /* ── Colores específicos de esta página ── */
     :root {
-      --paper:   #f5f0e8;
-      --paper2:  #ede8de;
-      --paper3:  #e4ddd0;
-      --ink:     #0e0d0b;
-      --gold:    #b8860b;
-      --gold-lt: #d4a843;
-      --muted:   #7a7060;
-      --teal:    #1a7a68;
-      --red:     #8b1a1a;
-      --nvidia:  #76b900;
-      --white:   #ffffff;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--paper);
-      background-image: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4"/></filter><rect width="100" height="100" fill="%230e0d0b" filter="url(%23n)" opacity="0.025"/></svg>');
-      color: var(--ink);
-      line-height: 1.7;
-      overflow-x: hidden;
+      --nvidia: #76b900;
     }
 
     /* ── NAV ── */
@@ -41,27 +23,7 @@
       justify-content: space-between; height: 60px;
       box-shadow: 0 2px 4px rgba(14,13,11,.08);
     }
-    .nav-logo {
-      font-family: 'Playfair Display', serif; font-weight: 800;
-      font-size: 1.2rem; color: var(--ink); text-decoration: none;
-    }
-    .nav-logo:hover { color: var(--gold); }
-    .nav-links { display: flex; gap: 1.5rem; }
-    .nav-links a {
-      color: var(--ink); text-decoration: none; font-size: .85rem;
-      font-weight: 600; letter-spacing: .5px; border-bottom: 2px solid transparent;
-      padding-bottom: 4px; transition: color .2s, border-color .2s;
-    }
-    .nav-links a:hover { color: var(--gold); border-color: var(--gold); }
-    .btn-nav {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--ink); text-decoration: none; font-weight: 600;
-      font-size: .9rem; border: 2px solid var(--ink); padding: 7px 14px;
-      border-radius: 4px; transition: all .2s;
-    }
-    .btn-nav:hover { background: var(--ink); color: var(--paper); }
-
-    main { margin-top: 60px; }
+    main { margin-top: 56px; }
 
     /* ── MASTHEAD ── */
     .masthead {
@@ -452,54 +414,6 @@
       .stats-bar { grid-template-columns: 1fr 1fr; }
     }
   
-    /* ── NAV UNIFIED ── */
-    .nav-wrap {
-      position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(245,240,232,0.94); backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(14,13,11,0.25);
-    }
-    .nav-inner {
-      max-width: 1160px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 1.5rem; height: 56px;
-    }
-    .nav-brand {
-      font-family: 'Playfair Display', serif;
-      font-weight: 800; font-size: 1.2rem; color: #0e0d0b;
-      text-decoration: none; letter-spacing: -0.5px;
-    }
-    .nav-brand span { color: #b8860b; }
-    .nav-links-wrap { display: flex; align-items: center; gap: 1.5rem; }
-    #nav-menu { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
-    #nav-menu a {
-      font-size: .78rem; font-weight: 600; color: #7a7060;
-      text-decoration: none; letter-spacing: .5px; text-transform: uppercase;
-      transition: color .2s;
-    }
-    #nav-menu a:hover { color: #b8860b; }
-    .nav-socials { display: flex; gap: .4rem; }
-    .nav-socials a {
-      width: 30px; height: 30px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .78rem; text-decoration: none; color: #7a7060;
-      border: 1px solid rgba(14,13,11,0.25); transition: all .2s;
-    }
-    .nav-socials a:hover { background: #0e0d0b; color: #f5f0e8; border-color: #0e0d0b; }
-    #nav-toggle {
-      display: none; background: none; border: none;
-      font-size: 1.1rem; color: #0e0d0b; cursor: pointer;
-    }
-    @media (max-width: 640px) {
-      #nav-menu { display: none; flex-direction: column; }
-      #nav-menu.open {
-        display: flex; position: absolute; top: 56px; left: 0; right: 0;
-        background: #f5f0e8; padding: 1rem 1.5rem;
-        border-bottom: 2px solid #0e0d0b; gap: .75rem; z-index: 200;
-      }
-      #nav-toggle { display: block; }
-      .nav-socials { display: none; }
-    }
-
   </style>
 </head>
 <body>
@@ -507,36 +421,18 @@
 <div class="nav-wrap">
   <div class="nav-inner">
     <a href="../index.html" class="nav-brand">Isay<span>.</span></a>
-    <div class="nav-links-wrap">
-      <ul id="nav-menu">
-        <li><a href="../index.html#semana">Esta Semana</a></li>
-        <li><a href="../index.html#eventos">Eventos</a></li>
-        <li><a href="../taller-excel/index.html">Taller Excel</a></li>
-        <li><a href="../nvidia-dli/index.html">NVIDIA DLI</a></li>
-        <li><a href="../oracle-apex/index.html">Oracle APEX</a></li>
-      </ul>
+    <div class="nav-right">
+      <span class="nav-chip" style="background: var(--nvidia); color: var(--ink);">NVIDIA DLI</span>
       <div class="nav-socials">
-        <a id="nav-ig" href="https://www.instagram.com/miguel_isay/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a id="nav-x"  href="https://x.com/miguel_isay" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
-        <a id="nav-li" href="https://www.linkedin.com/in/miguel-morales7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/miguel_isay/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/miguel_isay" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/miguel-morales7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/I-say" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       </div>
-      <button id="nav-toggle"><i class="fas fa-bars"></i></button>
+      <a href="../index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Inicio</a>
     </div>
   </div>
 </div>
-
-  <!-- NAV -->
-  <nav>
-    <a href="../" class="nav-logo">Isay.</a>
-    <div class="nav-links">
-      <a href="#por-que">¿Por qué tomarlo?</a>
-      <a href="#contenido">Contenido</a>
-      <a href="#requisitos">Requisitos</a>
-      <a href="#certificacion">Certificación</a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <a href="../" class="btn-nav">← Regresar</a>
-  </nav>
 
   <main>
 

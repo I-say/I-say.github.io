@@ -1,0 +1,180 @@
+/*
+  isay-shared.css
+  Estilos base compartidos por todas las páginas del portafolio de Isay.
+  Variables, reset, body, textura, scrollbar y nav unificado.
+  ─────────────────────────────────────────────────────────────────────
+*/
+
+/* ── VARIABLES ── */
+:root {
+  --ink:           #0e0d0b;
+  --paper:         #f5f0e8;
+  --paper2:        #ede8de;
+  --paper3:        #e4ddd0;
+  --gold:          #b8860b;
+  --gold-lt:       #d4a843;
+  --muted:         #7a7060;
+  --teal:          #1a7a68;
+  --red:           #8b1a1a;
+  --border:        rgba(14, 13, 11, 0.12);
+  --border-strong: rgba(14, 13, 11, 0.25);
+  --shadow:        0 2px 16px rgba(14, 13, 11, 0.08);
+  --r:             8px;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Textura de papel */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  background-size: 180px;
+}
+
+/* Stacking context global */
+* {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: var(--paper2); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ══════════════════════════════════════════════════════════
+   NAV UNIFICADO
+   Funciona en todas las páginas. El index.html añade en su
+   propio <style> los estilos del menú completo (#nav-menu,
+   #nav-toggle, etc.). Las subpáginas usan .nav-right.
+   ══════════════════════════════════════════════════════════ */
+
+.nav-wrap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(245, 240, 232, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.nav-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 56px;
+}
+
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+
+.nav-brand span {
+  color: var(--gold);
+}
+
+/* ── Nav subpáginas: chip + sociales + volver ── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-chip {
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 3px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.nav-back {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .2s;
+  white-space: nowrap;
+}
+
+.nav-back:hover {
+  color: var(--gold);
+}
+
+/* Íconos sociales — usados en subpáginas y en index */
+.nav-socials {
+  display: flex;
+  gap: .5rem;
+}
+
+.nav-socials a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid var(--border-strong);
+  transition: all .2s;
+}
+
+.nav-socials a:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* ── Nav móvil para subpáginas (ocultar sociales en pantallas pequeñas) ── */
+@media (max-width: 480px) {
+  .nav-socials {
+    display: none;
+  }
+
+  .nav-chip {
+    display: none;
+  }
+}

@@ -8,69 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../isay-shared.css"/>
   <style>
+    /* ── Colores específicos Oracle APEX ── */
     :root {
-      --ink:      #0e0d0b;
-      --paper:    #f5f0e8;
-      --paper2:   #ede8de;
-      --paper3:   #e4ddd0;
-      --gold:     #b8860b;
-      --gold-lt:  #d4a843;
-      --muted:    #7a7060;
-      --teal:     #1a7a68;
-      --red:      #8b1a1a;
-      --oracle:   #c74634;   /* rojo Oracle */
-      --oracle-lt:#e05c46;
-      --border:   rgba(14,13,11,0.12);
-      --border-strong: rgba(14,13,11,0.25);
-      --r:        8px;
+      --oracle:    #c74634;
+      --oracle-lt: #e05c46;
     }
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; font-size:16px; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--paper); color: var(--ink);
-      line-height: 1.7; overflow-x: hidden; position: relative;
-    }
-    body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.025; background-size: 180px;
-    }
-    * { position: relative; z-index: 1; }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
-
-    /* ── NAV ── */
-    .nav-wrap {
-      position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(245,240,232,0.94); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-strong);
-    }
-    .nav-inner {
-      max-width: 1160px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 1.5rem; height: 56px;
-    }
-    .nav-brand {
-      font-family: 'Playfair Display', serif;
-      font-weight: 800; font-size: 1.2rem; color: var(--ink);
-      text-decoration: none;
-    }
-    .nav-brand span { color: var(--gold); }
-    .nav-right { display: flex; align-items: center; gap: 1.25rem; }
-    .nav-chip {
-      background: var(--oracle); color: #fff;
-      font-size: .68rem; font-weight: 800; letter-spacing: .5px;
-      text-transform: uppercase; padding: 3px 10px; border-radius: 3px;
-    }
-    .nav-back {
-      display: flex; align-items: center; gap: 6px;
-      font-size: .82rem; font-weight: 600; color: var(--muted);
-      text-decoration: none; transition: color .2s;
-    }
-    .nav-back:hover { color: var(--gold); }
 
     main { margin-top: 56px; }
 
@@ -351,20 +295,15 @@
 <div class="nav-wrap">
   <div class="nav-inner">
     <a href="../index.html" class="nav-brand">Isay<span>.</span></a>
-    <div class="nav-links-wrap">
-      <ul id="nav-menu">
-        <li><a href="../index.html#semana">Esta Semana</a></li>
-        <li><a href="../index.html#eventos">Eventos</a></li>
-        <li><a href="../taller-excel/index.html">Taller Excel</a></li>
-        <li><a href="../nvidia-dli/index.html">NVIDIA DLI</a></li>
-        <li><a href="../oracle-apex/index.html">Oracle APEX</a></li>
-      </ul>
+    <div class="nav-right">
+      <span class="nav-chip" style="background: var(--oracle);">Oracle APEX</span>
       <div class="nav-socials">
         <a href="https://www.instagram.com/miguel_isay/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://x.com/miguel_isay" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
         <a href="https://www.linkedin.com/in/miguel-morales7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/I-say" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       </div>
-      <button id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+      <a href="../index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Inicio</a>
     </div>
   </div>
 </div>
